@@ -1112,7 +1112,7 @@ footer#footer li.social_item svg{
  	background-position: center center;
 }
 .swiper_hp .swiper-slide:nth-child(2n){
-	background-image: url(images/image_test_slider_02.jpg);
+	background-image: url(images/image_test_02_slider.jpg);
 }
 
 
@@ -1348,7 +1348,77 @@ footer#footer li.social_item svg{
 	background-size: 120% auto;
 }
 
-
+/* Lanceur catégorie biens neuf */
+.lanceur_cat{
+  background-image: url(images/image_test.jpg);
+  background-size: 100%;
+  background-position: center center;
+  transition: all 0.4s ease;
+  color: #fff;
+}
+.lanceur_cat span,
+.lanceur_cat .fav{
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+.lanceur_cat .fav{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.lanceur_cat .fav svg{
+  display: block;
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  transition: all 0.4s ease;
+}
+.lanceur_cat .fav:hover svg{
+  fill: #fe5a5f;
+}
+.lanceur_cat:hover{
+  background-size: 120%;
+}
+.lanceur_cat:hover span,
+.lanceur_cat:hover .fav{
+  opacity: 1;
+}
+.lanceur_cat .right{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  text-align: right;
+}
+.lanceur_cat .left{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+.lanceur_cat span{
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+}
+/* Petit */
+.lanceur_cat.small{
+  background-size: auto 100%;
+}
+.lanceur_cat.small:hover{
+  background-size: auto 120%;
+}
+.lanceur_cat.small span{
+  font-size: 14px;
+}
+.lanceur_cat.small .right{
+  text-align: left;
+  bottom: inherit;
+  top: 15px;
+  right: inherit;
+  left: 15px;
+}
 
 
 /* = Carte
@@ -1897,8 +1967,6 @@ ul#liste_disponibilite li a svg{
   float: left;
   width: 176px;
   height: 176px;
-  background: #C09;
-  border: 2px solid hsla(0, 0%, 0%, 0.5);
 }
 .grid-item--width2 { width: 382px; }
 .grid-item--height2 { width: 588px; height: 382px; }
@@ -2198,7 +2266,8 @@ ul#liste_disponibilite li a svg{
 	#deux_lanceurs_hp .big{
 		font-size: 22px;
 	}
-	.list_designers-sizer, .lanceur_deisgner{
+  .list_designers .list_designers-sizer,
+  .list_designers .lanceur_deisgner{
 		width: 100%;
 	}
   /* Page ajout de bien */
@@ -2236,6 +2305,15 @@ ul#liste_disponibilite li a svg{
   }
   #breadcrumb p{
     font-size: 14px; 
+  }
+  /* About */
+  .list.presentation .section{
+    display: block;
+    align-items: inherit;
+  }
+  .list.presentation .section div:nth-child(1),
+  .list.presentation .section div:nth-child(2){
+    margin: 0px;
   }
 }
 
