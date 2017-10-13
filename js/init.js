@@ -243,7 +243,7 @@ $(function() {
 	/* = Apparition du la top search bar sur smartphone
 	----------------------------------------------- */
 	$('#search_smartphone').click(function(){
-		$('#top_search_bar form').toggleClass('show');
+		$('#top_search_bar .reveal, #filter .reveal').toggleClass('show');
 		$('#close_top_search_bar').toggleClass('show');
 		$('#open_top_search_bar').toggleClass('show');
 		return false;
@@ -251,7 +251,7 @@ $(function() {
 	$('#close_top_search_bar').click(function(){
 		$('#close_top_search_bar').toggleClass('show');
 		$('#open_top_search_bar').toggleClass('show');
-		$('#top_search_bar form').toggleClass('show');
+		$('#top_search_bar .reveal, #filter .reveal').toggleClass('show');
 		return false;
 	});
 
@@ -362,18 +362,22 @@ $(function() {
 
   	/* = Grid horizontal layout
 	----------------------------------------------- */
-	$('#grid_cat').packery({
-	  itemSelector: '.grid-item',
-	  isHorizontal: true,
-	  gutter: 30
-	});
-	/* Custom scrollbar */
-    $(window).on("load",function(){
-           $("#scrollable").mCustomScrollbar({
-		    axis:"x",
-		    theme:"minimal-dark"
+
+	if (window.matchMedia("(min-width: 767px)").matches) {
+		$('#grid_cat').packery({
+		  itemSelector: '.grid-item',
+		  isHorizontal: true,
+		  gutter: 30
 		});
-    });
+		/* Custom scrollbar */
+	    $(window).on("load",function(){
+	           $("#scrollable").mCustomScrollbar({
+			    axis:"x",
+			    theme:"minimal-dark"
+			});
+	    });
+	} else {
+	}
 
 
 

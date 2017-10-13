@@ -1262,12 +1262,12 @@ footer#footer li.social_item svg{
 	display: block;
 	position: relative;
 }
-.lanceur_deisgner .designer_card{
+.designer_card{
 	position: absolute;
 	bottom: 15px;
 	left: 15px;
 }
-.lanceur_deisgner .designer_card > img{
+.designer_card > img{
 	border-radius: 50%;
 	width: 65px;
 	height: 65px;
@@ -1275,7 +1275,7 @@ footer#footer li.social_item svg{
 	vertical-align: middle;
 	margin: -2px 5px 0 0;
 }
-.lanceur_deisgner .designer_card span{
+.designer_card span{
 	color: #fff;
 	font-size: 14px;
   display: inline-block;
@@ -1285,7 +1285,7 @@ footer#footer li.social_item svg{
 	background: -webkit-linear-gradient(top, rgba(25,118,144,0) 0%,rgba(25,118,144,0.8) 100%);
 	background: linear-gradient(to bottom, rgba(25,118,144,0) 0%,rgba(25,118,144,0.8) 100%);
 }
-.lanceur_deisgner .designer_card span img.star{
+.designer_card span img.star{
   display: inline-block;
   height: 15px;
   width: 15px;
@@ -1348,7 +1348,7 @@ footer#footer li.social_item svg{
 	background-size: 120% auto;
 }
 
-/* Lanceur catégorie biens neuf */
+/* Lanceur catégorie biens neuf et anciens */
 .lanceur_cat{
   background-image: url(images/image_test.jpg);
   background-size: 100%;
@@ -1419,6 +1419,23 @@ footer#footer li.social_item svg{
   right: inherit;
   left: 15px;
 }
+
+/* Lanceur catégorie professionnels */
+.lanceur_cat_pro.small strong{
+  display: block;
+}
+.lanceur_cat_pro span{
+  font-size: 16px;
+}
+.lanceur_cat_pro .designer_card > img{
+  width: 50px;
+  height: 50px;
+}
+.lanceur_cat_pro .designer_card > span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 
 /* = Carte
@@ -1986,7 +2003,7 @@ ul#liste_disponibilite li a svg{
 	align-items: center;
 }
 #filter.carte form,
-#filter.carte div{
+#filter.carte div.inside{
 	width: 100%;
 	display: block;
 }
@@ -2182,7 +2199,8 @@ ul#liste_disponibilite li a svg{
 		height: 24px;
 		margin-top: -5px;
 	}
-	#top_search_bar form{
+	#top_search_bar form,
+  #filter div.inside{
 		height: 1px;
 		overflow: hidden;
 		transition: all 0.4s ease;
@@ -2190,12 +2208,15 @@ ul#liste_disponibilite li a svg{
 	#top_search_bar form.show{
 		height: 300px;
 	}
-	#top_search_bar #open_top_search_bar,
-	#top_search_bar #close_top_search_bar{
+  #filter div.inside.show{
+    height: 450px;
+  }
+	#open_top_search_bar,
+	#close_top_search_bar{
 		display: none;
 	}
-	#top_search_bar #open_top_search_bar.show,
-	#top_search_bar #close_top_search_bar.show{
+	#open_top_search_bar.show,
+	#close_top_search_bar.show{
 		display: block;
 	}
 	/* Typo */
@@ -2314,6 +2335,44 @@ ul#liste_disponibilite li a svg{
   .list.presentation .section div:nth-child(1),
   .list.presentation .section div:nth-child(2){
     margin: 0px;
+  }
+  /* Categories */
+  .category #content #scrollable{
+    overflow-x: inherit;
+  }
+  #grid_cat{
+    margin: 0px 10px;
+    height: inherit;
+    width: calc(100% - 20px);
+    padding-right: 0px;
+  }
+  #filter.carte{
+    position: relative;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    bottom: inherit;
+    display: block;
+    align-items: inherit;
+    height: inherit;
+    padding: 15px;
+  }
+  .grid-item,
+  .grid-item--width2,
+  .grid-item--height2{
+    width: 100%;
+    clear: both;
+    margin: 0 0 30px 0;
+    position: relative;
+    height: 250px;
+    background-size: cover;
+  }
+  #search_smartphone{
+    text-align: center;
+  }
+  #filter.carte div.inside h2{
+    font-size: 20px;
+    margin-top: 15px;
   }
 }
 
