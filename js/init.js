@@ -380,6 +380,47 @@ $(function() {
 	}
 
 
+  	/* = Sticky carte single professionnels
+	----------------------------------------------- */
+	$('#banner_image').css("height",($("#carte_sticky").height()+233)+"px");
+
+	if (window.matchMedia("(min-width: 767px)").matches) {   
+		var asidecarte = $("#carte_sticky");
+	    $(window).scroll(function() {
+	        var scroll_sticky = $(window).scrollTop();
+
+	        if (scroll_sticky >= 150) {
+	            asidecarte.addClass("sticky");
+	        } else {
+	            asidecarte.removeClass("sticky");
+	        }
+	    });
+	} else {
+		// Smartphones
+	}
+	// redimentionnement
+	function redimensionnement_sticky() {
+	  if("matchMedia" in window) { // Détection
+	    if(window.matchMedia("(min-width:767px)").matches) {
+	    	// Smartphone
+	    } else {
+	    	var asidecarte = $("#carte_sticky");
+		    $(window).scroll(function() {
+		        var scroll_sticky = $(window).scrollTop();
+
+		        if (scroll_sticky >= 150) {
+	            	asidecarte.addClass("sticky");
+		        } else {
+	            	asidecarte.removeClass("sticky");
+		        }
+		    });
+	    }
+	  }
+	}
+	// On lie l'événement resize à la fonction
+	window.addEventListener('resize', redimensionnement_sticky, false);
+
+
 
 
 });

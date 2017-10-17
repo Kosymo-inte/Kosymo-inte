@@ -272,7 +272,8 @@ hr.clear{
 	clear: both;
 }
 /* Sections demi */
-.list.presentation .section{
+.list.presentation .section,
+#pro_content .section.content.deux_colonnes{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -280,11 +281,15 @@ hr.clear{
   align-items: center;
   margin-bottom: 30px;
 }
-.list.presentation .section div:nth-child(1){
+.list.presentation .section div:nth-child(1),
+.section.content.deux_colonnes div:nth-child(1){
   margin-right: 15px;
+  flex-basis: calc(50% - 15px);
 }
-.list.presentation .section div:nth-child(2){
+.list.presentation .section div:nth-child(2n),
+.section.content.deux_colonnes div:nth-child(2){
   margin-left: 15px;
+  flex-basis: calc(50% - 15px);
 }
 @media only screen and (max-width: 1230px) {
   .center{
@@ -1664,6 +1669,74 @@ footer#footer li.social_item svg{
   }
 }
 
+/* Lanceur Annonce phare */
+.lanceur_phares{
+	padding-top: 30%;
+	position: relative;
+	background-size: auto 100%;
+}
+.lanceur_phares:hover{
+	background-size: auto 120%;
+}
+
+/* lanceur dernières annonces */
+.dernieres-annonces .item_professionel{
+	position: 
+}
+.dernieres-annonces .item_professionel a .fav{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.dernieres-annonces .item_professionel a .fav svg{
+  display: block;
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  transition: all 0.4s ease;
+}
+.dernieres-annonces .item_professionel a .fav:hover svg{
+  fill: #fe5a5f;
+}
+.dernieres-annonces .item_professionel a .right{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  text-align: right;
+}
+.dernieres-annonces .item_professionel a .left{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  text-align: left;
+}
+.dernieres-annonces .item_professionel a span{
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+}
+.dernieres-annonces .item_professionel a span{
+	position: relative;
+	bottom: inherit;
+	left: inherit;
+	right: inherit;
+}
+/* Petit */
+.dernieres-annonces .item_professionel.small a span{
+  font-size: 14px;
+}
+.dernieres-annonces .item_professionel.small a .right{
+  text-align: left;
+  bottom: inherit;
+  top: 15px;
+  right: inherit;
+  left: 15px;
+}
+
+
 
 
 /* = Carte
@@ -1732,6 +1805,33 @@ a.btn svg{
   font-size: 20px;
   font-weight: 300;
 }
+.carte img#logo_pro{
+  margin-bottom: 30px;
+}
+.carte address{
+  font-size: 20px;
+  font-weight: 300;
+}
+.carte address a{
+  transition: all 0.4s ease;
+}
+.carte address a:hover{
+  color: #ed6168;
+}
+/* Carte blanche */
+.carte.blanc{
+  background: #ffffff;
+  color: inherit;
+  text-align: center;
+}
+.carte.blanc hr.divider{
+  background: #3f3f3f;
+  margin: 25px auto;
+}
+.carte.blanc p{
+  font-size: 16px;
+  font-weight: 300;
+}
 @media only screen and (max-width: 767px) {
   .carte{
     float: none;
@@ -1741,7 +1841,18 @@ a.btn svg{
     margin-bottom: 30px;
   }
 }
-
+/* Sticky carte */
+#carte_sticky{
+  float: left;
+  position: sticky;
+  top: 250px;
+  margin-left: 50px;
+  transition: all 0.4s ease;
+  z-index: 50;
+}
+#carte_sticky.sticky{
+  top: 130px;
+}
 
 
 /* = Home Page
@@ -2112,6 +2223,11 @@ img#image_preview_conseillere{
 #breadcrumb a:hover{
   color: #ff4d52;
 }
+/* blanc */
+.single_pro #breadcrumb{
+  color: #fff;
+}
+
 @media only screen and (max-width: 767px) {
   /* #breadcrumb */
   #breadcrumb{
@@ -2224,7 +2340,7 @@ ul#liste_disponibilite li a svg{
   fill: #197690;
 }
 /* Point de vente */
-#post_explains .adresse_pdv{
+.adresse_pdv{
   color: #197690;
   font-size: 16px;
   line-height: 1.4em;
@@ -2331,9 +2447,9 @@ ul#liste_disponibilite li a svg{
 	margin-bottom: 30px;
 }
 @media only screen and (max-width: 767px) {
-  .category #content #scrollable{
-    overflow-x: inherit;
-  }
+		.category #content #scrollable{
+		overflow-x: inherit;
+	}
   #grid_cat{
     margin: 0px 10px;
     height: inherit;
@@ -2383,3 +2499,95 @@ ul#liste_disponibilite li a svg{
     margin: 0px;
   }
 }
+
+
+/* = Single Pro
+----------------------------------------------- */
+#banner_image{
+	background-position: center center;
+	background-size: cover;
+	background-image: url(images/image_test_slider.jpg);
+	padding: 50px; 
+}
+#banner_image a.retour{
+	margin-left: -280px;
+}
+#pro_content .section{
+	width: calc(100% - 410px);
+	margin-left: 380px;
+	margin-right: 30px;
+	margin-top: 90px;
+	position: relative;
+}
+#pro_content .section:last-child{
+  margin-bottom: 30px;
+}
+#pro_content .section h2{
+	font-weight: 600;
+	font-size: 20px;
+	color: #fff;
+	background: #197690;
+	padding: 7px 7px 7px 0;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 30px;
+}
+#pro_content .section h2:before{
+	content: '';
+	display: block;
+	background: #197690;
+	position: absolute;
+	left: 0;
+	margin-left: -380px;
+	top: 0;
+	height: 34px;
+	width: 380px;
+}
+/* Module team */
+.team_list .team{
+	text-align: center;
+}
+.team_list .team img.avatar{
+	border-radius: 50%;
+	width: 126px;
+	display: block;
+	margin: 0 auto 15px auto;
+}
+#pro_content .section.grey{
+	background: #f5f5f5;
+	width: 100%;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 380px;
+	padding-right: 30px;
+	margin-top: 90px;
+	margin-bottom: 90px;
+	position: relative;
+}
+/* Section content */
+#pro_content .section.content{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#pro_content .section.content.texte{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#pro_content .section p{
+	max-width: 689px;
+	margin-right: auto;
+	margin-left: auto; 
+}
+/* point de vente */
+#pro_content .section.point_de_vente p{
+	font-size: 16px;
+}
+
+
+
+
+
+
+
