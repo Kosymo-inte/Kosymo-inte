@@ -281,9 +281,8 @@ $(function() {
 	});
 
 
-	/* = Masonry
+	/* = Masonry // Home page
 	----------------------------------------------- */
-
 	if (window.matchMedia("(min-width: 767px)").matches) {
 		/* Designers list */
 		var $grid_designer = $('.list_designers').imagesLoaded( function() {
@@ -296,7 +295,22 @@ $(function() {
 		  });
 		});
 		/* Professionnels list HP */
-		var $grid_professionnels = $('.list_professionnels').imagesLoaded( function() {
+		var $grid_dernieres_annonces = $('.list_professionnels').imagesLoaded( function() {
+		  // init Masonry after all images have loaded
+		  $grid_dernieres_annonces.masonry({
+			  itemSelector: '.item_professionel',
+			  columnWidth: '.item_professionel_sizer',
+		  	  percentPosition: true,
+		  	  gutter: 30
+		  });
+		});
+	}
+
+
+	/* = Masonry // Fiche professionnel
+	----------------------------------------------- */
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		var $grid_professionnels = $('.liste_dernieres_annonces').imagesLoaded( function() {
 		  // init Masonry after all images have loaded
 		  $grid_professionnels.masonry({
 			  itemSelector: '.item_professionel',
@@ -305,7 +319,6 @@ $(function() {
 		  	  gutter: 30
 		  });
 		});
-	} else {
 	}
   
 
@@ -382,9 +395,9 @@ $(function() {
 
   	/* = Sticky carte single professionnels
 	----------------------------------------------- */
-	$('#banner_image').css("height",($("#carte_sticky").height()+233)+"px");
 
-	if (window.matchMedia("(min-width: 767px)").matches) {   
+	if (window.matchMedia("(min-width: 767px)").matches) {
+		$('#banner_image').css("height",($("#carte_sticky").height()+233)+"px"); 
 		var asidecarte = $("#carte_sticky");
 	    $(window).scroll(function() {
 	        var scroll_sticky = $(window).scrollTop();
@@ -404,6 +417,7 @@ $(function() {
 	    if(window.matchMedia("(min-width:767px)").matches) {
 	    	// Smartphone
 	    } else {
+			$('#banner_image').css("height",($("#carte_sticky").height()+233)+"px");
 	    	var asidecarte = $("#carte_sticky");
 		    $(window).scroll(function() {
 		        var scroll_sticky = $(window).scrollTop();

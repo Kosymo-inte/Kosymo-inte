@@ -1299,7 +1299,7 @@ footer#footer li.social_item svg{
   }
 }
 
-/* = Slider HP (if no viedo)
+/* = Slider HP (if no vidoo)
 ----------------------------------------------- */
 .swiper_hp{
 	width: 100%;
@@ -1674,9 +1674,26 @@ footer#footer li.social_item svg{
 	padding-top: 30%;
 	position: relative;
 	background-size: auto 100%;
+	display: block;
 }
 .lanceur_phares:hover{
 	background-size: auto 120%;
+}
+@media only screen and (max-width: 1400px) {
+  .lanceur_phares .right{
+  	top: 15px;
+  	left: 15px;
+  	bottom: inherit;
+  	right: inherit;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .lanceur_phares{
+  	width: 100%;
+  	margin-right: 0px;
+  	margin-bottom: 30px;
+  	height: 350px
+  }
 }
 
 /* lanceur dernières annonces */
@@ -1734,6 +1751,49 @@ footer#footer li.social_item svg{
   top: 15px;
   right: inherit;
   left: 15px;
+}
+@media only screen and (max-width: 1400px) {
+	.dernieres-annonces .item_professionel a .fav{
+	  right: 5px;
+	  top: 5px;
+	}
+	.dernieres-annonces .item_professionel a .right{
+	  right: 5px;
+	  bottom: 5px;
+	}
+	.dernieres-annonces .item_professionel a .left{
+	  left: 5px;
+	  bottom: 5px;
+	}
+	.dernieres-annonces .item_professionel.small a .right{
+	  top: 5px;
+	  left: 5px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+  .dernieres-annonces .lanceur-big{
+    height: 130px;
+  }
+  .dernieres-annonces .lanceur-big a h2{
+    font-size: 25px;
+  }
+  .dernieres-annonces .item_professionel,
+  .dernieres-annonces .item_professionel.big,
+  .dernieres-annonces .item_professionel.middle{
+    width: 100%;
+    padding-bottom: 56.25%; /* ratio 16/9 */
+    background-size: 100%;
+    position: relative;
+  }
+  .dernieres-annonces .item_professionel:hover,
+  .dernieres-annonces .item_professionel.big:hover,
+  .dernieres-annonces .item_professionel.middle:hover{
+      background-size: 120%;
+  }
+  .dernieres-annonces .list_designers .list_designers-sizer,
+  .dernieres-annonces .list_designers .lanceur_deisgner{
+    width: 100%;
+  }
 }
 
 
@@ -1832,15 +1892,6 @@ a.btn svg{
   font-size: 16px;
   font-weight: 300;
 }
-@media only screen and (max-width: 767px) {
-  .carte{
-    float: none;
-    position: relative;
-    width: 100%;
-    top: inherit;
-    margin-bottom: 30px;
-  }
-}
 /* Sticky carte */
 #carte_sticky{
   float: left;
@@ -1852,6 +1903,22 @@ a.btn svg{
 }
 #carte_sticky.sticky{
   top: 130px;
+}
+@media only screen and (max-width: 767px) {
+  .carte,
+  #carte_sticky,
+  #carte_sticky.sticky{
+    float: none;
+    position: relative;
+    width: 100%;
+    top: inherit;
+    margin-bottom: 30px;
+  }
+  #carte_sticky,
+  #carte_sticky.sticky{
+  	margin-left: 0px;
+  	margin-bottom: 0px;
+  }
 }
 
 
@@ -2589,7 +2656,56 @@ ul#liste_disponibilite li a svg{
 #pro_content .section.point_de_vente p{
 	font-size: 16px;
 }
-
+@media only screen and (max-width: 1200px) {
+  #pro_content .section .demi{
+	float: none;
+	width: 100%;
+	margin-right: 0px;
+	margin-bottom: 30px;
+	display: block;
+  }
+  #pro_content .section.content.deux_colonnes{
+  	display: block;
+  }
+  #pro_content .section.content.deux_colonnes div:nth-child(1),
+  #pro_content .section.content.deux_colonnes div:nth-child(2){
+    margin: 0px;
+  }
+  #pro_content .section.point_de_vente iframe{
+  	width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+	#pro_content .section,
+	#pro_content .section.grey{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 50px;
+		padding: 0 15px;
+		position: relative;
+	}
+	#banner_image{
+		padding: 30px;
+	}
+	#banner_image a.retour{
+		margin-left: 0px;
+	}
+	.single_pro #breadcrumb{
+		display: none;
+	}
+	.team_list .team{
+		float: left;
+		margin-right: 30px;
+		width: calc(50% - 15px);
+	}
+	.team_list .team:nth-child(2n){
+		margin-right: 0px;
+	}
+	.team_list .team:nth-child(3n+1){
+		clear: none;
+	}
+}
 
 
 
