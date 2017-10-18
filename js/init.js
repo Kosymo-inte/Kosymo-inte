@@ -105,7 +105,7 @@ $(function() {
 		            /* Si on click sur le bouton d'ajout central */
 		        	if($input.hasClass('ajout_une_image')) {
 			        	// Creat a previe image in the main content
-			           $('#media_content').append('<img class="single_image" src="' + e.target.result + '">').show();
+			           $('#media_content').append('<img class="single_image" src="' + e.target.result + '"><input type="text" placeholder="Légende de la photo">').show();
 		            }
 		            /* Si on click sur le bouton d'ajout de vidéo */
 		        	if($input.hasClass('ajout_video')) {
@@ -156,7 +156,7 @@ $(function() {
 
 	        /* Si on a cliqué sur ajout de slider, on ajoute la structure du slider */
 		    if($input_multiple.hasClass('ajout_slider')) {
-	        	var newSwiper_bien = $('<div class="swiper-container swiper_bien"></div>').appendTo('#media_content');
+	        	var newSwiper_bien = $('<div class="swiper-container swiper_bien"></div><input type="text" placeholder="Légende du slider">').appendTo('#media_content');
 	        	var newSwiper_wrapper_bien = $('<div class="swiper-wrapper"></div>').appendTo(newSwiper_bien);
 	        	var newSwiper_wrapper_pagination = $('<div class="swiper-pagination swiper-pagination_bien"></div>').appendTo(newSwiper_bien);
 		    }
@@ -170,7 +170,7 @@ $(function() {
 
 				        /* Si on a cliqué sur ajout de deux images, on ajoute deux preview img */
 					    if($input_multiple.hasClass('ajout_deux_image')) {
-			            	$(newDiv).append('<img class="double_image" src="' + e.target.result + '">').show();
+			            	$(newDiv).append('<div class="demi"><img src="' + e.target.result + '"><input type="text" placeholder="Légende de la photo"></div>').show();
 					    }
 
 				        /* Si on a cliqué sur ajout de slider, on ajoute des slides dans la structure du slider */
@@ -178,9 +178,15 @@ $(function() {
 			            	$(newSwiper_wrapper_bien).append('<div class="swiper-slide"><img src="' + e.target.result + '"></div>').show();
 					    }
 
+			    var swiper2 = new Swiper('.swiper_bien', {
+			        effect: 'slide',
+			        pagination: '.swiper-pagination_bien',
+			        paginationClickable: true
+			    });
+
 
 		         }
-		          	reader.readAsDataURL(file);
+		         reader.readAsDataURL(file);
 		        } else {
 			        alert(file.name + " is not a valid image file.");
 			        return false;
@@ -189,12 +195,6 @@ $(function() {
 	    } else {
 	    	alert("This browser does not support HTML5 FileReader.");
 	    }
-
-	    var swiper2 = new Swiper('.swiper_bien', {
-	        effect: 'slide',
-	        pagination: '.swiper-pagination_bien',
-	        paginationClickable: true
-	    });
 	}
 
 

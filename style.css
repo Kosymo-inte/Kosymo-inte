@@ -2075,17 +2075,10 @@ a.btn svg{
 img.single_image{
 	width: 100%;
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
-img.double_image{
-	width: calc(50% - 15px);
-	display: block;
-	margin-right: 30px;
-	float: left;
+img.single_image + input{
 	margin-bottom: 30px;
-}
-img.double_image + img.double_image{
-	margin-right: 0;
 }
 .deux_images{
 	clear: both;
@@ -2103,6 +2096,9 @@ img.double_image + img.double_image{
 /* Slider */
 .swiper-container.swiper_bien{
 	width: 100%;
+	margin-bottom: 5px;
+}
+.swiper-container.swiper_bien + input{
 	margin-bottom: 30px;
 }
 /* Colonne de droite */
@@ -2382,6 +2378,15 @@ ul#liste_disponibilite li a svg{
 /* Zone centrale */
 #post_content .section_bien{
   margin-bottom: 30px;
+}
+#post_content .section_bien p.legende{
+	font-weight: 300;
+	font-style: italic;
+	font-size: 13px;
+	margin-bottom: 0px;
+}
+.section_bien .swiper-container.swiper_bien{
+	margin-bottom: 0px;
 }
 #post_content .section_bien.map iframe{
   width: 100%;
