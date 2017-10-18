@@ -437,4 +437,43 @@ $(function() {
 
 
 
+
+  	/* = Apparition des bouton contact sur le comparateur
+	----------------------------------------------- */
+	$('#table_comparateur tr td:nth-child(2)').mouseover(function(){
+	    $('#table_comparateur .contact_bien_01 .btn').addClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(2)').mouseout(function(){
+	    $('#table_comparateur .contact_bien_01 .btn').removeClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(3)').mouseover(function(){
+	    $('#table_comparateur .contact_bien_02 .btn').addClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(3)').mouseout(function(){
+	    $('#table_comparateur .contact_bien_02 .btn').removeClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(4)').mouseover(function(){
+	    $('#table_comparateur .contact_bien_03 .btn').addClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(4)').mouseout(function(){
+	    $('#table_comparateur .contact_bien_03 .btn').removeClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(5)').mouseover(function(){
+	    $('#table_comparateur .contact_bien_04 .btn').addClass('show');
+		return false;
+	});
+	$('#table_comparateur tr td:nth-child(5)').mouseout(function(){
+	    $('#table_comparateur .contact_bien_04 .btn').removeClass('show');
+		return false;
+	});
+
+
+
+
 });

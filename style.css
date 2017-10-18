@@ -2708,7 +2708,102 @@ ul#liste_disponibilite li a svg{
 }
 
 
-
-
+/* = Comparateur
+----------------------------------------------- */
+#table_comparateur{
+	 margin-bottom: 50px;
+}
+#table_comparateur tr td{
+	width: calc(25% - 44.25px);
+	border-bottom: 1px solid #197690;
+	padding: 10px;
+	font-weight: 300;
+	font-style: 16px;
+	line-height: 1.4em;
+}
+#table_comparateur tr td.featured,
+#table_comparateur tr td.blank{
+	border-bottom: none;
+	padding: 0;
+}
+#table_comparateur tr td.title{
+	width: 177px;
+}
+#table_comparateur tr td.title.bleu{
+	color: #ffffff;
+	background: #197690;
+	padding: 7px 7px 7px 30px;
+	position: relative;
+}
+#table_comparateur tr td.title.bleu:after{
+	display: block;
+	content: "";
+	height: 1px;
+	left: 30px;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	background: #fff;
+}
+#table_comparateur tr td.title.bleu.blank:after{
+	display: none;
+}
+#table_comparateur tr td:nth-child(2n+1){
+	background: #fff5f5;
+}
+#table_comparateur tr td:first-child{
+	background: inherit;
+}
+#table_comparateur tr td.titre_bien{
+	text-align: center;
+	font-size: 22px;
+	font-weight: 800;
+	padding-top: 30px;
+}
+#table_comparateur tr td.adresse_bien{
+	text-align: center;
+}
+#table_comparateur tr td.pieces_bien{
+	text-align: center;
+}
+#table_comparateur tr.contact td,
+#table_comparateur tr.les_plus td{
+	border-bottom: none;
+}
+#table_comparateur tr.contact td{
+	text-align: center;
+}
+#table_comparateur tr.contact td a.btn{
+	opacity: 0;
+}
+#table_comparateur tr.contact td a.btn.show{
+	opacity: 1;
+}
+@media only screen and (max-width: 1200px) {
+	#content.comparateur{
+		overflow-x: scroll;
+	}
+	#table_comparateur tr td{
+		width: 350px;
+		min-width: 350px;
+	}
+	#table_comparateur tr td.title{
+		width: 177px;
+		min-width: 177px;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	#table_comparateur tr.contact td a.btn{
+		opacity: 1;
+	}
+	#table_comparateur tr td{
+		width: 250px;
+		min-width: 250px;
+	}
+	#table_comparateur tr td.title{
+		width: 177px;
+		min-width: 177px;
+	}
+}
 
 
