@@ -3,7 +3,7 @@
 
 /* --------------------------------------------- RESET SHEET */
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;}
 
 
 /* = Fonts import
@@ -364,7 +364,6 @@ h1.single_page{
     font-size: 24px;
   }
 }
-
 
 /* = Formulaires
 ----------------------------------------------- */
@@ -805,7 +804,7 @@ input[type="submit"]:hover{
           transform:scale(0);
 }
 .blanc .ink{
-  background:rgba(25, 118, 144, 0.25);
+  background:rgba(236, 91, 98, 0.25);
 }
 .animate {
   -webkit-animation:ripple 0.65s linear;
@@ -1485,7 +1484,8 @@ footer#footer li.social_item svg{
 	font-size: 14px;
   display: inline-block;
 }
-.lanceur_deisgner:hover .gradient{
+.lanceur_deisgner:hover .gradient,
+.lanceur_deisgner_fond:hover .gradient{
 	background: -moz-linear-gradient(top, rgba(25,118,144,0) 0%, rgba(25,118,144,0.8) 100%);
 	background: -webkit-linear-gradient(top, rgba(25,118,144,0) 0%,rgba(25,118,144,0.8) 100%);
 	background: linear-gradient(to bottom, rgba(25,118,144,0) 0%,rgba(25,118,144,0.8) 100%);
@@ -2820,6 +2820,7 @@ ul#liste_disponibilite li a svg{
 	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
 	color: #fff;
 }
+/* Navigation */
 .account img.avatar{
 	border-radius: 50%;
 	width: 136px;
@@ -2894,9 +2895,19 @@ ul#liste_disponibilite li a svg{
 	width: 100%;
 }
 /* Contenu */
+.shadow{
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
 #dashboard .contenu{
 	padding: 30px;
-	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #dashboard .trois-quart.contenu{
+    width: calc(75% - 15px);
+  }
+  #dashboard .account{
+    width: calc(25% - 15px);
+  }
 }
 #dashboard .contenu h1{
 	font-size: 30px;
@@ -2911,9 +2922,227 @@ ul#liste_disponibilite li a svg{
 .input_center{
 	text-align: center;
 }
-.input_center input{
+.input_center input,
+.input_center a.btn{
 	display: inline-block;
 	width: inherit;
+}
+/* Favoris */
+#tabs_favoris{
+	margin-top: 50px;
+	padding: 0; 
+}
+#tabs_favoris .ui-tabs-nav{
+	padding: 0;
+	border-bottom: 2px solid #898989;
+}
+#tabs_favoris .ui-tabs-nav li{
+	margin-right: 30px;
+}
+#tabs_favoris .ui-tabs-nav li:last-child{
+	margin-right: 0px;
+}
+#tabs_favoris .ui-tabs-nav .ui-tabs-anchor{
+	padding: 0;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-bottom: 13px;
+	border-bottom: 2px solid #ffffff;
+}
+@media only screen and (max-width: 767px) {
+  #tabs_favoris .ui-tabs-nav .ui-tabs-anchor,
+  #tabs_favoris .ui-tabs-nav li{
+    width: 100%;
+    clear: both;
+    float: none;
+    display: block;
+    margin-right: 0;
+  }
+  #tabs_favoris .ui-tabs-nav .ui-tabs-anchor{
+  	padding-bottom: 0px;
+  }
+  #tabs_favoris .ui-tabs-nav li{
+  	margin-bottom: 15px;
+  }
+}
+#tabs_favoris .ui-tabs-nav .ui-tabs-anchor:hover{
+	border-bottom: 2px solid #898989;
+}
+#tabs_favoris .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
+	color: #197690;
+	border-bottom: 2px solid #197690;
+}
+#tabs_favoris .ui-tabs-panel{
+	padding: 0;
+	margin-top: 15px;
+}
+#tabs_favoris .ui-tabs-panel .tiers{
+	width: calc(33.333% - 2px);
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+#tabs_favoris .ui-tabs-panel .tiers:nth-child(3n){
+	margin-right: 0px;
+}
+#tabs_favoris .lanceur_phares{
+	height: inherit;
+}
+@media only screen and (max-width: 767px) {
+  #tabs_favoris .ui-tabs-panel .tiers{
+    width: 100%;
+    clear: both;
+    float: none;
+    margin-right: 0;
+    height: 350px;
+  }
+}
+/* Ajout de projet */
+.choix_ajout_projet{
+  background-image: url(images/image_test.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 180px;
+  background-size: 100%;
+  transition: all 0.4s ease;
+}
+.choix_ajout_projet a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+}
+.choix_ajout_projet a p{
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 0.8em;
+  margin: 0;
+}
+.choix_ajout_projet a h2 strong{
+  font-weight: 700;
+}
+/* hover effects */
+.choix_ajout_projet:hover{
+  background-size: 120%;
+}
+/* Mes projets */
+.liste_projets{
+	margin-top: 50px;
+}
+/* Dashboard */
+.intro.contenu{
+	margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	#content.mon_compte .trois-quart{
+		width: calc(75% - 15px);
+	}
+	#content.mon_compte .list .demi{
+		width: 100%;
+		margin-right: 0;
+		float: none;
+	}
+}
+.intro.contenu p{
+	margin-bottom: 0px;
+}
+#dashboard .derniers_favoris h2{
+	color: #ec5b62;
+	font-weight: 500;
+	font-size: 16px;
+}
+.derniers_favoris h2 svg{
+	fill: #ec5b62;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -8px;
+	height: 20px;
+	width: 20px;
+}
+.lanceur_deisgner_fond{
+	position: relative;
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 15px;
+	background-image: url(images/designer_fav_small.png);
+	background-size: cover;
+}
+.lanceur_deisgner_fond .designer_card{
+	position: relative;
+	bottom: inherit;
+	left: inherit;
+}
+#ajout_projet{
+	display: block;
+	margin-bottom: 30px;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+	background: #197690;
+}
+#ajout_projet h2{
+	font-weight: 300;
+	margin-bottom: 5px;
+	font-size: 30px;
+}
+#ajout_projet p{
+	margin-bottom: 0;
+}
+#dashboard #derniers_messages h2{
+	color: #197690;
+	font-weight: 500;
+	font-size: 16px;
+}
+#dashboard #derniers_messages h2 span{
+	color: #ec5b62;
+}
+#derniers_messages h2 svg{
+	fill: #197690;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -5px;
+	height: 20px;
+	width: 20px;
+}
+#derniers_messages .message{
+	margin-bottom: 12px;
+}
+#derniers_messages .message:last-child{
+	margin-bottom: 0px;
+}
+.message img.avatar{
+	border-radius: 50%;
+	width: 40px;
+	float: left;
+	margin-right: 10px;
+	display: block;
+}
+.message .texte{
+	float: left;
+}
+.message .texte p{
+	background: #fff5f5;
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+.message .texte time{
+	font-size: 10px;
+	font-weight: 300;
+	display: block;
+	color: #8f8f8f;
 }
 
 
