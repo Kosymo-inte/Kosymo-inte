@@ -1808,6 +1808,7 @@ footer#footer li.social_item svg{
 	padding: 30px;
 	width: 280px;
 	float: left;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 130px;
 }
@@ -1895,6 +1896,7 @@ a.btn svg{
 /* Sticky carte */
 #carte_sticky{
   float: left;
+	position: -webkit-sticky;
   position: sticky;
   top: 250px;
   margin-left: 50px;
@@ -2805,5 +2807,117 @@ ul#liste_disponibilite li a svg{
 		min-width: 177px;
 	}
 }
+
+
+/* = Dashboard
+----------------------------------------------- */
+#dashboard{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.account{
+	background: #197690;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	color: #fff;
+}
+.account img.avatar{
+	border-radius: 50%;
+	width: 136px;
+	margin: 40px auto 15px auto;
+	display: block;
+}
+.account p{
+	text-align: center;
+}
+@media only screen and (max-width: 767px) {
+	.account img.avatar{
+		display: none;
+	}
+	.account p{
+		display: none;
+	}
+}
+.account nav#nav_account li a{
+	display: block;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 20px 25px;
+	transition: all 0.4s ease;
+}
+.account nav#nav_account li a svg{
+	display: inline-block;
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+	margin-top: -7px;
+	margin-right: 5px;
+	fill: #fff;
+}
+.account nav#nav_account li:before,
+.account nav#nav_account li:after{
+	content: "";
+	height: 1px;
+	margin: auto;
+	display: block;
+	background: #fff;
+	width: calc(100% - 50px);
+	transition: all 0.4s ease;
+}
+.account nav#nav_account li:before,
+.account nav#nav_account li:after{
+	content: "";
+	height: 2px;
+	margin: auto;
+	display: block;
+	background: #fff;
+	width: calc(100% - 50px);
+	margin-top: -2px;
+}
+.account nav#nav_account li:first-child:before,
+.account nav#nav_account li:last-child:after{
+	display: none;
+}
+/* Active state */
+.account nav#nav_account li.active:before,
+.account nav#nav_account li.active:after{
+	width: 100%;
+}
+.account nav#nav_account li.active a{
+	background: #30849b;
+	font-weight: 700;
+	cursor: default;
+}
+/* :hover state */
+.account nav#nav_account li:hover:before,
+.account nav#nav_account li:hover:after{
+	width: 100%;
+}
+/* Contenu */
+#dashboard .contenu{
+	padding: 30px;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+#dashboard .contenu h1{
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 10px; 
+}
+#dashboard .contenu h2{
+	font-weight: 800;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.input_center{
+	text-align: center;
+}
+.input_center input{
+	display: inline-block;
+	width: inherit;
+}
+
+
+
+
 
 
