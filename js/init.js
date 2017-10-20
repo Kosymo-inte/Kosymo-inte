@@ -5,15 +5,18 @@ $(function() {
 	if (window.matchMedia("(min-width: 767px)").matches) {   
 		var header = $("#header");
 	    var top_search_bar = $("#top_search_bar");
+	    var comparateur = $("#comparateur");
 	    $(window).scroll(function() {
 	        var scroll = $(window).scrollTop();
 
 	        if (scroll >= 500) {
 	            header.removeClass('nav-top').addClass("nav-middle");
 	            top_search_bar.removeClass('nav-top').addClass("nav-middle");
+	            comparateur.removeClass('nav-top').addClass("nav-middle");
 	        } else {
 	            header.removeClass("nav-middle").addClass('nav-top');
 	            top_search_bar.removeClass("nav-middle").addClass('nav-top');
+	            comparateur.removeClass("nav-middle").addClass('nav-top');
 	        }
 	    });
 	} else {
@@ -27,15 +30,18 @@ $(function() {
 	    } else {
 	    	var header = $("#header");
 		    var top_search_bar = $("#top_search_bar");
+	    	var comparateur = $("#comparateur");
 		    $(window).scroll(function() {
 		        var scroll = $(window).scrollTop();
 
 		        if (scroll >= 500) {
 		            header.removeClass('nav-top').addClass("nav-middle");
 		            top_search_bar.removeClass('nav-top').addClass("nav-middle");
+		            comparateur.removeClass('nav-top').addClass("nav-middle");
 		        } else {
 		            header.removeClass("nav-middle").addClass('nav-top');
 		            top_search_bar.removeClass("nav-middle").addClass('nav-top');
+		            comparateur.removeClass("nav-middle").addClass('nav-top');
 		        }
 		    });
 	    }
@@ -475,11 +481,18 @@ $(function() {
 
 
 
-
   	/* = Tabulation favoris
 	----------------------------------------------- */
 	$( "#tabs_favoris" ).tabs();
 
 
+
+  	/* = Changer le positionnement du comparateur si la barre de recherche est présente
+	----------------------------------------------- */
+	$(document).ready(function() {
+	    if ($('#top_search_bar') != null ) {
+	        $('#comparateur').addClass('bellow');
+	    }
+	});
 
 });

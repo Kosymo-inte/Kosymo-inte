@@ -1254,6 +1254,42 @@ footer#footer li.social_item svg{
 }
 
 
+/* = Bouton comparateur
+----------------------------------------------- */
+a#comparateur{
+	position: fixed;
+	z-index: 5;
+	right: 0;
+	top: 120px;
+	display: block;
+	padding: 12px 10px 10px 10px;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+	background: #f5f5f5;
+	color: #197690;
+    transition: all 0.4s ease;
+}
+a#comparateur svg{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	fill: #197690;
+	vertical-align: middle;
+	margin-top: -5px;
+	margin-right: 5px;
+    transition: all 0.4s ease;
+}
+a#comparateur:hover{
+	background: #197690;
+	color: #f5f5f5;
+}
+a#comparateur:hover svg{
+	fill: #f5f5f5;
+}
+a#comparateur.nav-middle{
+	top: 90px;
+}
+
+
 /* = Vidéo HP
 ----------------------------------------------- */
 #hp_big_video{
