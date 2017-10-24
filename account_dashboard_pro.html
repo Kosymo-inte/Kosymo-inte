@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Kozymo - Dashboard - Ajout projet étape 02</title>
+<title>Kozymo - Dashboard Pro</title>
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="js/swiper.min.css" />
 <link rel="stylesheet" href="js/jquery.mCustomScrollbar.css" />
@@ -343,7 +343,7 @@
 		<path d="M9.0100098,19v-3H2v-2h7.0100098v-3L13,15L9.0100098,19z M14.9899902,10v3L11,9l3.9899902-4v3H22v2H14.9899902z"/>
 	</svg> Comparateur <strong>(3)</strong>
 </a><!-- #comparateur -->
-<div id="content" class="dashboard">
+<div id="content" class="dashboard mon_compte">
 	<div id="dashboard" class="center">
 		<aside class="account quart">
 			<img src="images/avatar.jpg" class="avatar">
@@ -352,7 +352,7 @@
 			</p>
 			<nav id="nav_account">
 				<ul>
-					<li>
+					<li class="active">
 						<a href="#toto">
 							<svg viewBox="0 0 24 24">
 								<path fill="none" d="M0,0h24v24H0V0z"/>
@@ -381,7 +381,7 @@
 							Messagerie
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="#toto">
 							<svg viewBox="0 0 24 24">
 								<path fill="none" d="M0,0h24v24H0V0z"/>
@@ -428,34 +428,132 @@
 				</ul>
 			</nav>
 		</aside><!-- .account -->
-		<div class="trois-quart contenu shadow">
-			<h1>
-				Nouveau projet
-			</h1>
-			<p class="introduction">
-				Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
-			</p>
-			<form action="">
-				<div class="demi">
+		<div class="trois-quart">
+			<div class="shadow contenu intro">
+				<h1>
+					Mon compte
+				</h1>
+				<p class="introduction">
+					Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
+				</p>
+			</div><!-- .contenu -->
+			<div class="list">
+				<div class="shadow contenu demi derniers_favoris">
 					<h2>
-						Exemple de titre
+						<svg viewBox="0 0 24 24">
+							<path fill="none" d="M0,0h24v24H0V0z"/>
+							<path d="M12,21.3500004l-1.4499998-1.3199997C5.4000001,15.3599997,2,12.2799997,2,8.5C2,5.4200001,4.4200001,3,7.5,3
+								c1.7399998,0,3.4099998,0.8099999,4.5,2.0900002C13.0900002,3.8099999,14.7600002,3,16.5,3C19.5799999,3,22,5.4200001,22,8.5
+								c0,3.7799997-3.3999996,6.8600006-8.5500002,11.5400009L12,21.3500004z"/>
+						</svg> Mes derniers favoris
 					</h2>
-					<input type="text" placeholder="Budget">
-					<input type="text" placeholder="Lorem">
-					<input type="text" placeholder="Ipsum">
-				</div><!-- .demi -->
+					<div class="lanceur_deisgner_fond">
+						<a class="lien_designer_lanceur" href="#toto">
+							<div class="gradient"></div>
+							<div class="designer_card">
+								<img src="images/avatar.jpg">
+								<span>
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_empty.svg">
+									<img class="star" src="images/star_empty.svg"><br>
+									<strong>Alice Vance</strong> Designer
+								</span>
+							</div><!-- designer_card -->
+						</a>
+					</div><!-- .lanceur_deisgner -->
+					<div class="lanceur_deisgner_fond">
+						<a class="lien_designer_lanceur" href="#toto">
+							<div class="gradient"></div>
+							<div class="designer_card">
+								<img src="images/avatar.jpg">
+								<span>
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_empty.svg">
+									<img class="star" src="images/star_empty.svg"><br>
+									<strong>Alice Vance</strong> Designer
+								</span>
+							</div><!-- designer_card -->
+						</a>
+					</div><!-- .lanceur_deisgner -->
+					<div class="lanceur_deisgner_fond">
+						<a class="lien_designer_lanceur" href="#toto">
+							<div class="gradient"></div>
+							<div class="designer_card">
+								<img src="images/avatar.jpg">
+								<span>
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_full.svg">
+									<img class="star" src="images/star_empty.svg">
+									<img class="star" src="images/star_empty.svg"><br>
+									<strong>Alice Vance</strong> Designer
+								</span>
+							</div><!-- designer_card -->
+						</a>
+					</div><!-- .lanceur_deisgner -->
+				</div><!-- .demi .derniers_favoris -->
 				<div class="demi">
-					<h2>
-						Exemple de titre
-					</h2>
-					<input type="text" placeholder="Ipsum">
-					<input type="text" placeholder="Ipsum">
+					<a href="#toto" id="ajout_projet" class="material-onclick shadow">
+						<h2>
+							Créez un projet
+						</h2>
+						<p>
+							Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives.
+						</p>
+					</a>
+					<div id="derniers_messages" class="contenu shadow">
+						<h2>
+							<svg viewBox="0 0 24 24">
+								<path d="M20,2H4C2.9000001,2,2,2.9000001,2,4v18l4-4h14c1.1000004,0,2-0.8999996,2-2V4C22,2.9000001,21.1000004,2,20,2z"/>
+								<path fill="none" d="M0,0h24v24H0V0z"/>
+							</svg> Mes derniers messages <span>(3 nouveaux)</span>
+						</h2>
+						<div class="list_messages">
+							<div class="message">
+								<img src="images/avatar.jpg" class="avatar">
+								<div class="texte">
+									<p>
+										Posset accedere, moriendi autem sensum …
+									</p>
+									<time datetime="2017-11-10T10:25">
+										lun. 10 novembre 10h25
+									</time>
+								</div><!-- .texte -->
+								<hr class="clear">
+							</div><!-- .message -->
+							<div class="message">
+								<img src="images/avatar.jpg" class="avatar">
+								<div class="texte">
+									<p>
+										Posset accedere, moriendi autem sensum …
+									</p>
+									<time datetime="2017-11-10T10:25">
+										lun. 10 novembre 10h25
+									</time>
+								</div><!-- .texte -->
+								<hr class="clear">
+							</div><!-- .message -->
+							<div class="message">
+								<img src="images/avatar.jpg" class="avatar">
+								<div class="texte">
+									<p>
+										Posset accedere, moriendi autem sensum …
+									</p>
+									<time datetime="2017-11-10T10:25">
+										lun. 10 novembre 10h25
+									</time>
+								</div><!-- .texte -->
+								<hr class="clear">
+							</div><!-- .message -->
+						</div><!-- .list_messages -->
+					</div><!-- #derniers_messages -->
 				</div><!-- .demi -->
 				<hr class="clear">
-				<div class="input_center">
-					<input type="submit" value="Envoyer">
-				</div>
-			</form>
+			</div><!-- .list -->
 		</div>
 		<hr class="clear">
 	</div><!-- #dashboard -->
