@@ -1087,7 +1087,7 @@ header#header.nav-middle a#logo svg .typo{
 footer#footer{
 	background-color: #197690;
 	color: #fff;
-	padding: 130px 0 100px 0;
+	padding: 100px 0 100px 0;
 }
 footer#footer a{
   transition: all 0.4s ease;
@@ -1095,12 +1095,14 @@ footer#footer a{
 footer#footer h4{
   font-weight: 700;
   margin-bottom: 20px;
+  margin-top: 30px;
   font-size: 20px;
 }
 footer#footer ul li{
   margin-bottom: 5px;
 }
-footer#footer ul li a:hover{
+footer#footer ul li a:hover,
+footer#footer h4 a:hover{
   opacity: 0.5;
 }
 small#legals{
