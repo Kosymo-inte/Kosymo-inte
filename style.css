@@ -1292,7 +1292,7 @@ a#comparateur.nav-middle{
 }
 @media only screen and (max-width: 767px) {
   a#comparateur{
-    top: inherit;
+    top: auto;
     bottom: 0px;
   }
 }
@@ -2874,6 +2874,11 @@ ul#liste_disponibilite li a svg{
 	margin: 40px auto 15px auto;
 	display: block;
 }
+.account img.avatar_pro{
+	width: 230px;
+	display: block;
+	margin: 40px auto 15px auto;
+}
 .account p{
 	text-align: center;
 }
@@ -3134,7 +3139,7 @@ ul#liste_disponibilite li a svg{
 	bottom: inherit;
 	left: inherit;
 }
-#ajout_projet{
+.ajout_projet{
 	display: block;
 	margin-bottom: 30px;
 	padding: 15px;
@@ -3142,12 +3147,15 @@ ul#liste_disponibilite li a svg{
 	color: #fff;
 	background: #197690;
 }
-#ajout_projet h2{
+.ajout_projet h2{
 	font-weight: 300;
 	margin-bottom: 5px;
 	font-size: 30px;
 }
-#ajout_projet p{
+.ajout_projet.sans{
+	margin-bottom: 0px;
+}
+.ajout_projet p{
 	margin-bottom: 0;
 }
 #dashboard #derniers_messages h2{
@@ -3195,6 +3203,60 @@ ul#liste_disponibilite li a svg{
 	display: block;
 	color: #8f8f8f;
 }
+/* Dashboard Pro */
+#dashboard #dernier_projets h2{
+	font-weight: 500;
+	font-size: 16px;
+	color: #197690;
+}
+#dernier_projets h2 svg{
+	fill: #197690;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -5px;
+	height: 20px;
+	width: 20px;
+}
+ul#list_dernier_projets li{
+	border-bottom: 1px solid #d2d2d2;
+}
+ul#list_dernier_projets li:last-child{
+	border-bottom: none;
+}
+ul#list_dernier_projets li a{
+	padding: 7px 0;
+	display: block;
+	transition: all 0.4s ease;
+}
+ul#list_dernier_projets li a:hover{
+	background: #eee;
+}
+#statistiques .statistique span{
+	font-weight: 800;
+	font-size: 30px;
+}
+#statistiques .statistique.good span{
+	color: #197690;
+}
+#statistiques .statistique.bad span{
+	color: #fe5a5f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -346,10 +346,7 @@
 <div id="content" class="dashboard mon_compte">
 	<div id="dashboard" class="center">
 		<aside class="account quart">
-			<img src="images/avatar.jpg" class="avatar">
-			<p>
-				Bonjour <strong>Nicolas</strong> :)
-			</p>
+			<img src="images/logo_vinci.png" class="avatar_pro">
 			<nav id="nav_account">
 				<ul>
 					<li class="active">
@@ -369,7 +366,7 @@
 									c1.7399998,0,3.4099998,0.8099999,4.5,2.0900002C13.0900002,3.8099999,14.7600002,3,16.5,3C19.5799999,3,22,5.4200001,22,8.5
 									c0,3.7799997-3.3999996,6.8600006-8.5500002,11.5400009L12,21.3500004z"/>
 							</svg>
-							Favoris
+							Ma fiche pro
 						</a>
 					</li>
 					<li>
@@ -390,7 +387,7 @@
 									l9.1000013,9.1000004c0.3999996,0.3999996,1,0.3999996,1.3999996,0l2.2999992-2.2999992
 									C23.1000004,20.0000019,23.1000004,19.3000011,22.7000008,19z"/>
 							</svg>
-							Mes projets
+							Les projets
 						</a>
 					</li>
 					<li>
@@ -438,73 +435,67 @@
 				</p>
 			</div><!-- .contenu -->
 			<div class="list">
-				<div class="shadow contenu demi derniers_favoris">
-					<h2>
-						<svg viewBox="0 0 24 24">
-							<path fill="none" d="M0,0h24v24H0V0z"/>
-							<path d="M12,21.3500004l-1.4499998-1.3199997C5.4000001,15.3599997,2,12.2799997,2,8.5C2,5.4200001,4.4200001,3,7.5,3
-								c1.7399998,0,3.4099998,0.8099999,4.5,2.0900002C13.0900002,3.8099999,14.7600002,3,16.5,3C19.5799999,3,22,5.4200001,22,8.5
-								c0,3.7799997-3.3999996,6.8600006-8.5500002,11.5400009L12,21.3500004z"/>
-						</svg> Mes derniers favoris
-					</h2>
-					<div class="lanceur_deisgner_fond">
-						<a class="lien_designer_lanceur" href="#toto">
-							<div class="gradient"></div>
-							<div class="designer_card">
-								<img src="images/avatar.jpg">
-								<span>
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_empty.svg">
-									<img class="star" src="images/star_empty.svg"><br>
-									<strong>Alice Vance</strong> Designer
-								</span>
-							</div><!-- designer_card -->
-						</a>
-					</div><!-- .lanceur_deisgner -->
-					<div class="lanceur_deisgner_fond">
-						<a class="lien_designer_lanceur" href="#toto">
-							<div class="gradient"></div>
-							<div class="designer_card">
-								<img src="images/avatar.jpg">
-								<span>
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_empty.svg">
-									<img class="star" src="images/star_empty.svg"><br>
-									<strong>Alice Vance</strong> Designer
-								</span>
-							</div><!-- designer_card -->
-						</a>
-					</div><!-- .lanceur_deisgner -->
-					<div class="lanceur_deisgner_fond">
-						<a class="lien_designer_lanceur" href="#toto">
-							<div class="gradient"></div>
-							<div class="designer_card">
-								<img src="images/avatar.jpg">
-								<span>
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_full.svg">
-									<img class="star" src="images/star_empty.svg">
-									<img class="star" src="images/star_empty.svg"><br>
-									<strong>Alice Vance</strong> Designer
-								</span>
-							</div><!-- designer_card -->
-						</a>
-					</div><!-- .lanceur_deisgner -->
-				</div><!-- .demi .derniers_favoris -->
 				<div class="demi">
-					<a href="#toto" id="ajout_projet" class="material-onclick shadow">
+					<a href="#toto" class="ajout_projet sans material-onclick shadow">
 						<h2>
-							Créez un projet
+							Ajouter un bien
 						</h2>
 						<p>
 							Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives.
 						</p>
 					</a>
+				</div>
+				<div class="demi">
+					<a href="#toto" class="ajout_projet sans material-onclick shadow">
+						<h2>
+							Ajouter un programme
+						</h2>
+						<p>
+							Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives.
+						</p>
+					</a>
+				</div><!-- .demi -->
+				<hr class="clear">
+			</div><!-- .list -->
+			<div class="list">
+				<div class="demi">
+					<div id="dernier_projets" class="contenu shadow">
+						<h2>
+							<svg viewBox="0 0 24 24">
+								<path d="M20,2H4C2.9000001,2,2,2.9000001,2,4v18l4-4h14c1.1000004,0,2-0.8999996,2-2V4C22,2.9000001,21.1000004,2,20,2z"/>
+								<path fill="none" d="M0,0h24v24H0V0z"/>
+							</svg> Les derniers projets postés
+						</h2>
+						<ul id="list_dernier_projets">
+							<li>
+								<a href="#toto">
+									<strong>[ACHAT]</strong> Appartement 165m<sup>2</sup> Marseille 06
+								</a>
+							</li>
+							<li>
+								<a href="#toto">
+									<strong>[ACHAT]</strong> Maison 165m<sup>2</sup> Marseille 06
+								</a>
+							</li>
+							<li>
+								<a href="#toto">
+									<strong>[LOCATION]</strong> Maison 165m<sup>2</sup> Marseille 06
+								</a>
+							</li>
+							<li>
+								<a href="#toto">
+									<strong>[LOCATION]</strong> Appartement 165m<sup>2</sup> Marseille 06
+								</a>
+							</li>
+							<li>
+								<a href="#toto">
+									<strong>[ACHAT]</strong> Maison 165m<sup>2</sup> Marseille 06
+								</a>
+							</li>
+						</ul>
+					</div><!-- .contenu -->
+				</div><!-- .demi -->
+				<div class="demi">
 					<div id="derniers_messages" class="contenu shadow">
 						<h2>
 							<svg viewBox="0 0 24 24">
@@ -554,7 +545,54 @@
 				</div><!-- .demi -->
 				<hr class="clear">
 			</div><!-- .list -->
-		</div>
+			<div id="statistiques" class="shadow contenu">
+				<div class="quart statistique good">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique good">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique bad">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique good">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique bad">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique good">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique bad">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<div class="quart statistique good">
+					<span>1895</span><br>
+					Lorem statistique
+				</div><!-- .quart -->
+				<hr class="clear">
+			</div><!-- #statistiques -->
+		</div><!-- .trois-quart -->
 		<hr class="clear">
 	</div><!-- #dashboard -->
 </div><!-- #content -->
