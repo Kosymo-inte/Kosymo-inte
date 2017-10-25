@@ -657,18 +657,18 @@ input[type="submit"]:hover{
 }
 
 /* Add post version */
-.add_post input[type="text"],
-.add_post input[type="email"],
-.add_post input[type="tel"],
-.add_post input[type="password"],
-.add_post input[type="date"],
-.add_post input[type="search"],
-.add_post textarea,
-.add_post .select-style,
-.add_post label.check:before,
-.add_post input[type=checkbox] + label:before,
-.add_post label.radio:before,
-.add_post input[type=radio] + label:before{
+.add_new_post input[type="text"],
+.add_new_post input[type="email"],
+.add_new_post input[type="tel"],
+.add_new_post input[type="password"],
+.add_new_post input[type="date"],
+.add_new_post input[type="search"],
+.add_new_post textarea,
+.add_new_post .select-style,
+.add_new_post label.check:before,
+.add_new_post input[type=checkbox] + label:before,
+.add_new_post label.radio:before,
+.add_new_post input[type=radio] + label:before{
 	border-color: #dcdcdc;
 	background-color: #dcdcdc;
 	color: #555555;
@@ -678,18 +678,18 @@ input[type="submit"]:hover{
 .add_post input[type=radio] + label{
 	color: #515151;
 }
-.add_post input[type="text"]:hover,
-.add_post input[type="email"]:hover,
-.add_post input[type="tel"]:hover,
-.add_post input[type="password"]:hover,
-.add_post input[type="date"]:hover,
-.add_post input[type="search"]:hover,
-.add_post textarea:hover,
-.add_post .select-style:hover,
-.add_post label.check:hover:before,
-.add_post input[type=checkbox]:hover + label:before,
-.add_post label.radio:hover:before,
-.add_post input[type=radio]:hover + label:before{
+.add_new_post input[type="text"]:hover,
+.add_new_post input[type="email"]:hover,
+.add_new_post input[type="tel"]:hover,
+.add_new_post input[type="password"]:hover,
+.add_new_post input[type="date"]:hover,
+.add_new_post input[type="search"]:hover,
+.add_new_post textarea:hover,
+.add_new_post .select-style:hover,
+.add_new_post label.check:hover:before,
+.add_new_post input[type=checkbox]:hover + label:before,
+.add_new_post label.radio:hover:before,
+.add_new_post input[type=radio]:hover + label:before{
 	border-color: #eee;
 	background-color: #eee;
 }
@@ -700,13 +700,13 @@ input[type="submit"]:hover{
   opacity: 1;
   border: 1px solid #197690;
 }
-.add_post input[type="text"]:focus,
-.add_post input[type="email"]:focus,
-.add_post input[type="tel"]:focus,
-.add_post input[type="password"]:focus,
-.add_post input[type="date"]:focus,
-.add_post input[type="search"]:focus,
-.add_post textarea:focus{
+.add_new_post input[type="text"]:focus,
+.add_new_post input[type="email"]:focus,
+.add_new_post input[type="tel"]:focus,
+.add_new_post input[type="password"]:focus,
+.add_new_post input[type="date"]:focus,
+.add_new_post input[type="search"]:focus,
+.add_new_post textarea:focus{
 	border-color: #555555;
 	background: #555555;
 	color: #ffffff;
@@ -2173,16 +2173,33 @@ a.retour{
 }
 #module_ajout .action{
 	display: inline-block;
+	padding: 15px;
+	transition: all 0.4s ease;
+	cursor: pointer;
 }
-#module_ajout .action input[type="file"] + label{
+#module_ajout .action:hover{
+	background: #eee;
+}
+#module_ajout .action p{
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 500;
+	line-height: 1em;
+	margin-bottom: 0px;
+	text-align: center;
 }
-#module_ajout .action input[type="file"] + label svg{
+#module_ajout .action p svg{
 	height: 40px;
 	width: 40px;
-	margin-bottom: 10px;
+	fill: #555555;
+	display: block;
+	margin: 0 auto 10px auto;
+}
+#media_content .ajout{
+	margin-bottom: 30px;
+}
+#media_content .ajout .demi{
+	margin-bottom: 0px;
 }
 /* Images */
 img.single_image{
@@ -2205,6 +2222,15 @@ img.single_image + input{
 	text-align: center;
 	color: #fff;
 	padding-bottom: 56.25%;
+	display: none;
+}
+#media_content .video.show{
+	display: block;
+}
+/* Slider ajout */
+.ajout .swiper-container.swiper_bien .swiper-slide{
+	background-color: #fafafa;
+	height: auto;
 }
 /* Slider */
 .swiper-container.swiper_bien{

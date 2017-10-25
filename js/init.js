@@ -92,6 +92,122 @@ $(function() {
 	});
 
 
+  	/* = Ajout des images preview pour la barre central d'ajout de biens
+	----------------------------------------------- */
+	/* UNE IMAGE */
+	var counter = 1;  //Le décompte commence à 1
+	$('#ajout_photo').click(function(){
+		counter++;
+		$('#media_content form').append('<div class="ajout"><input id="ajout_image'+counter+'" name="ajout_image'+counter+'" type="file" class="imgInp"><label for="ajout_image'+counter+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div>');
+	
+	    function readURL() {
+		    var $input_central = $(this);
+		    if (this.files && this.files[0]) {
+		        var reader = new FileReader();
+		        reader.onload = function(e) {
+		        	/* Si on click sur un input de la barre de gauche */
+		        	if($input_central.hasClass('imgInp')) {
+			        	// Add the image in the SRC <img> next to the input
+			            $input_central.nextAll('.image_preview_input').eq(0).attr('src', e.target.result).show().addClass('show');
+			        	// Modify the label next to the <img>
+		            	$input_central.next('label').eq(0).addClass('modify');
+		            }
+		        }
+		        reader.readAsDataURL(this.files[0]);
+		    }
+		}
+		$(".imgInp").change(readURL);
+	});
+
+	/* DEUX IMAGE */
+	var counter_double = 1;  //Le décompte commence à 1
+	var counter_double_image = 1;  //Le décompte commence à 1
+	$('#ajout_deux_photo').click(function(){
+		counter_double_image++;
+		$('#media_content form').append('<div class="ajout" id="double'+counter_double+'"></div>');
+		$('#double'+counter_double+'').append('<div class="demi"><input id="ajout_image_double'+counter_double_image+'" name="ajout_image_double'+counter_double_image+'" type="file" class="imgInp"><label for="ajout_image_double'+counter_double_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div>');
+		counter_double_image++;
+		$('#double'+counter_double+'').append('<div class="demi"><input id="ajout_image_double'+counter_double_image+'" name="ajout_image_double'+counter_double_image+'" type="file" class="imgInp"><label for="ajout_image_double'+counter_double_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div><hr class="clear">');
+		counter_double_image++;
+		counter_double++;
+	
+	    function readURL() {
+		    var $input_central = $(this);
+		    if (this.files && this.files[0]) {
+		        var reader = new FileReader();
+		        reader.onload = function(e) {
+		        	/* Si on click sur un input de la barre de gauche */
+		        	if($input_central.hasClass('imgInp')) {
+			        	// Add the image in the SRC <img> next to the input
+			            $input_central.nextAll('.image_preview_input').eq(0).attr('src', e.target.result).show().addClass('show');
+			        	// Modify the label next to the <img>
+		            	$input_central.next('label').eq(0).addClass('modify');
+		            }
+		        }
+		        reader.readAsDataURL(this.files[0]);
+		    }
+		}
+		$(".imgInp").change(readURL);
+	});
+
+	/* UNE VIDEO */
+	var counter_video = 1;  //Le décompte commence à 1
+	$('#ajout_video').click(function(){
+		counter_video++;
+		$('#media_content form').append('<div class="ajout"><input id="ajout_video'+counter_video+'" name="ajout_video'+counter_video+'" type="file" class="imgInp"><label for="ajout_video'+counter_video+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une vidéo</span><span class="modify">Modifier la vidéo</span></label><div class="video"></div></div>');
+		$('#ajout_video'+counter_video+'').change(function(e){
+			var fileName = $(this).val().replace(/C:\\fakepath\\/i, '');
+			$(this).nextAll('.video').addClass('show').html('Vidéo ajoutée : '+fileName);
+		    $(this).next('label').eq(0).addClass('modify');
+	    });
+	});
+
+	/* Slider */
+	var counter_slider = 1;  //Le décompte commence à 1
+	var counter_slider_image = 1;  //Le décompte commence à 1
+	$('#ajout_slider').click(function(){
+		counter_slider_image++;
+		// Ajout de la structure du slider
+		$('#media_content form').append('<div class="ajout" id="slider'+counter_slider+'"><div class="swiper-container swiper_bien"><div class="swiper-wrapper"></div><div class="swiper-pagination swiper-pagination_bien"></div></div><input type="text" placeholder="Légende du slider"></div>');
+		// Ajout des cinq slides
+		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		counter_slider_image++;
+		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		counter_slider_image++;
+		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		counter_slider_image++;
+		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		counter_slider_image++;
+		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		counter_slider_image++;
+		counter_slider++;
+
+				    var swiper2 = new Swiper('.swiper_bien', {
+				        effect: 'slide',
+				        pagination: '.swiper-pagination_bien',
+				        paginationClickable: true
+				    });
+	
+	    function readURL() {
+		    var $input_central = $(this);
+		    if (this.files && this.files[0]) {
+		        var reader = new FileReader();
+		        reader.onload = function(e) {
+		        	/* Si on click sur un input de la barre de gauche */
+		        	if($input_central.hasClass('imgInp')) {
+			        	// Add the image in the SRC <img> next to the input
+			            $input_central.nextAll('.image_preview_input').eq(0).attr('src', e.target.result).show().addClass('show');
+			        	// Modify the label next to the <img>
+		            	$input_central.next('label').eq(0).addClass('modify');
+		            }
+		        }
+		        reader.readAsDataURL(this.files[0]);
+		    }
+		}
+		$(".imgInp").change(readURL);
+	});
+
+
 
   	/* = Images preview on input type file
 	----------------------------------------------- */
@@ -108,11 +224,6 @@ $(function() {
 			        	// Modify the label next to the <img>
 		            	$input.next('label').eq(0).addClass('modify');
 		            }
-		            /* Si on click sur le bouton d'ajout central */
-		        	if($input.hasClass('ajout_une_image')) {
-			        	// Creat a previe image in the main content
-			           $('#media_content').append('<img class="single_image" src="' + e.target.result + '"><input type="text" placeholder="Légende de la photo">').show();
-		            }
 		            /* Si on click sur le bouton d'ajout de vidéo */
 		        	if($input.hasClass('ajout_video')) {
 			        	// Creat a previe image in the main content
@@ -123,85 +234,9 @@ $(function() {
 		    }
 		}
 		$(".imgInp").change(readURL);
-		$("#ajout_une_image").change(readURL);
 		$("#ajout_video").change(readURL);
 
 
-  	/* = Ajout des images preview pour la barre central d'ajout de biens
-	----------------------------------------------- */
-	/* Deux images 
-	1// Limitation à 2 ajouts, pas plus */
-	$('#ajout_deux_image').change(function(){
-	    if(this.files.length>2)
-	        alert('Vous ne pouvez insérer que deux photos')
-	});
-	// Prevent submission if limit is exceeded.
-	$('form.add_post').submit(function(){
-	    if(this.files.length>2)
-	        return false;
-	});
-	/* Preview images */
-	window.onload = function () {
-	    var fileUpload = document.getElementsByClassName("fileupload");
-	    for(var i = 0; i < fileUpload.length; i++){
-	    fileUpload[i].onchange = showImgOnChange;
-	    }
-	}
-	var showImgOnChange = function () {
-		var $input_multiple = $(this);
-
-	    if (typeof (FileReader) != "undefined") {
-	        var dvPreview = this.nextElementSibling;
-
-	        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
-
-	        /* Si on a cliqué sur ajout de deux images, on ajoute une div parent aux deux img */
-		    if($input_multiple.hasClass('ajout_deux_image')) {
-			    var newDiv = $('<div class="deux_images"></div>').appendTo('#media_content');
-		    }
-
-	        /* Si on a cliqué sur ajout de slider, on ajoute la structure du slider */
-		    if($input_multiple.hasClass('ajout_slider')) {
-	        	var newSwiper_bien = $('<div class="swiper-container swiper_bien"></div><input type="text" placeholder="Légende du slider">').appendTo('#media_content');
-	        	var newSwiper_wrapper_bien = $('<div class="swiper-wrapper"></div>').appendTo(newSwiper_bien);
-	        	var newSwiper_wrapper_pagination = $('<div class="swiper-pagination swiper-pagination_bien"></div>').appendTo(newSwiper_bien);
-		    }
-
-
-	        for (var i = 0; i < this.files.length; i++) {
-		        var file = this.files[i];
-		        if (regex.test(file.name.toLowerCase())) {
-		        	var reader = new FileReader();
-		           	reader.onload = function (e) {
-
-				        /* Si on a cliqué sur ajout de deux images, on ajoute deux preview img */
-					    if($input_multiple.hasClass('ajout_deux_image')) {
-			            	$(newDiv).append('<div class="demi"><img src="' + e.target.result + '"><input type="text" placeholder="Légende de la photo"></div>').show();
-					    }
-
-				        /* Si on a cliqué sur ajout de slider, on ajoute des slides dans la structure du slider */
-					    if($input_multiple.hasClass('ajout_slider')) {
-			            	$(newSwiper_wrapper_bien).append('<div class="swiper-slide"><img src="' + e.target.result + '"></div>').show();
-					    }
-
-			    var swiper2 = new Swiper('.swiper_bien', {
-			        effect: 'slide',
-			        pagination: '.swiper-pagination_bien',
-			        paginationClickable: true
-			    });
-
-
-		         }
-		         reader.readAsDataURL(file);
-		        } else {
-			        alert(file.name + " is not a valid image file.");
-			        return false;
-		        }
-	        }
-	    } else {
-	    	alert("This browser does not support HTML5 FileReader.");
-	    }
-	}
 
 
 

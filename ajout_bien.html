@@ -339,11 +339,6 @@
 		<span>Bonjour <strong>Nicolas</strong> :)</span>
 	</a>
 </header><!-- #header -->
-<a href="comparateur.html" id="comparateur" class="material-onclick">
-	<svg viewBox="0 0 24 24">
-		<path d="M9.0100098,19v-3H2v-2h7.0100098v-3L13,15L9.0100098,19z M14.9899902,10v3L11,9l3.9899902-4v3H22v2H14.9899902z"/>
-	</svg> Comparateur <strong>(3)</strong>
-</a><!-- #comparateur -->
 <div id="content" class="fullwidth_padding ajout_bien">
 	<a href="#toto" class="btn blanc material-onclick retour">
 		<svg viewBox="0 0 24 24">
@@ -352,7 +347,7 @@
 		</svg> Retour à mon compte
 	</a>
 	<hr class="clear">
-	<aside class="carte">
+	<aside class="carte add_new_post">
 		<form action="" class="add_post">
 			<input type="text" placeholder="Nom">
 			<hr class="divider">
@@ -381,13 +376,13 @@
 	</aside><!-- .carte -->
 	<div id="post_content">
 		<div id="media_content">
+			<form action="" class="add_post">
+			</form>
 		</div><!-- #media_content -->
 		<hr class="clear">
 		<div id="module_ajout">
-			<form action="" class="add_post">
-				<div class="action">
-					<input id="ajout_une_image" class="ajout_une_image" name="ajout_une_image" type="file">
-					<label for="ajout_une_image">
+				<div id="ajout_photo" class="action material-onclick">
+					<p>
 						<svg viewBox="0 0 24 24">
 							<path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/>
 							<path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14
@@ -395,13 +390,10 @@
 								l4.5,6H5L8.5,13.5002346z"/>
 						</svg>
 						<span>Ajouter<br>une photo</span>
-					</label>
+					</p>
 				</div><!-- .action -->
-
-
-				<div class="action">
-					<input id="ajout_deux_image" class="fileupload ajout_deux_image" name="ajout_deux_image" type="file" multiple>
-					<label for="ajout_deux_image">
+				<div id="ajout_deux_photo" class="action material-onclick">
+					<p>
 						<svg viewBox="0 0 24 24">
 							<path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/>
 							<path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002h-4.5781593c-1.1000004,0-2,0.9000001-2,2.0000002v14
@@ -411,25 +403,19 @@
 								 M5.1219792,18.0002346v-6l4.4999995,6H5.1219792z"/>
 						</svg>
 						<span>Ajouter<br>deux photos</span>
-					</label>
+					</p>
 				</div><!-- .action -->
-
-
-				<div class="action">
-					<input id="ajout_video" class="ajout_video" name="ajout_video" type="file">
-					<label for="ajout_video">
+				<div id="ajout_video" class="action material-onclick">
+					<p>
 						<svg viewBox="0 0 24 24">
 							<path fill="none" d="M0,0h24v24H0V0z"/>
 							<path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.4799995,10-10S17.5200005,2,12,2z M10,16.5v-9l6,4.5L10,16.5z"/>
 						</svg>
 						<span>Ajouter<br>une vidéo</span>
-					</label>
+					</p>
 				</div><!-- .action -->
-
-
-				<div class="action">
-					<input id="ajout_slider" name="ajout_slider" class="fileupload ajout_slider" type="file" multiple>
-					<label for="ajout_slider">
+				<div id="ajout_slider" class="action material-onclick">
+					<p>
 						<svg viewBox="0 0 24 24">
 							<path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/>
 							<path d="M1,5.0002346h2v14H1V5.0002346z M5,5.0002346h2v14H5V5.0002346z M22,5.0002346H10c-0.5500002,0-1,0.4499998-1,1v12
@@ -437,14 +423,11 @@
 								l2.5-3.1499996l1.79,2.1499996l2.500001-3.2200003L21,17.0002346H11z"/>
 						</svg>
 						<span>Ajouter<br>un slider</span>
-					</label>
+					</p>
 				</div><!-- .action -->
-
-
-			</form><!-- .add_post -->
 		</div><!-- #module_ajput -->
 	</div><!-- #post_content -->
-	<div id="post_explains">
+	<div id="post_explains" class="add_new_post">
 		<form action="" class="add_post">
 
 			<input id="logo_projet" name="logo_projet" type="file" class="imgInp">
@@ -468,7 +451,7 @@
 						c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002
 						l4.5,6H5L8.5,13.5002346z"/>
 				</svg>
-				<span class="add">Ajouter une photo contat</span>
+				<span class="add">Ajouter une photo contact</span>
 				<span class="modify">Modifier la photo de contat</span>
 			</label>
 		    <img class="image_preview_input" src="#" id="image_preview_conseillere">
