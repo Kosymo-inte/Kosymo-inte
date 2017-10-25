@@ -495,4 +495,39 @@ $(function() {
 	    }
 	});
 
+
+
+  	/* = Tableaux
+	----------------------------------------------- */
+	$(document).ready(function() {
+		// Setup - add a text input to each footer cell
+		$('.table-filter-up thead tr#filterrow th').each( function () {
+		    var title = $('.table-filter-up thead th').eq( $(this).index() ).text();
+		    $(this).html( '<input type="text" onclick="stopPropagation(event);" placeholder="'+title+'" />' );
+		} );
+
+		// Apply the filter
+		$(".table-filter-up thead input").on( 'keyup change', function () {
+		    table
+		        .column( $(this).parent().index()+':visible' )
+		        .search( this.value )
+		        .draw();
+		} );
+		 
+		// DataTable
+		var table = $('.table-filter-up').DataTable( {
+		    orderCellsTop: true,
+		    "scrollX": true
+		} );
+
+		function stopPropagation(evt) {
+			if (evt.stopPropagation !== undefined) {
+				evt.stopPropagation();
+			} else {
+				evt.cancelBubble = true;
+			}
+		}
+
+	} );
+
 });
