@@ -2920,15 +2920,16 @@ ul#liste_disponibilite li a svg{
     top: inherit;
   }
 }
-.account nav#nav_account li a{
+.account nav#nav_account li span{
 	display: block;
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 300;
 	padding: 20px 25px;
 	transition: all 0.4s ease;
+  cursor: pointer;
 }
-.account nav#nav_account li a svg{
+.account nav#nav_account li span svg{
 	display: inline-block;
 	vertical-align: middle;
 	height: 24px;
@@ -2966,7 +2967,7 @@ ul#liste_disponibilite li a svg{
 .account nav#nav_account li.active:after{
 	width: 100%;
 }
-.account nav#nav_account li.active a{
+.account nav#nav_account li.active span{
 	background: #30849b;
 	font-weight: 700;
 	cursor: default;
