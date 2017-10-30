@@ -2694,6 +2694,7 @@ ul#liste_disponibilite li a svg{
 .team_list .team img.avatar{
 	border-radius: 50%;
 	width: 126px;
+  height: 126px;
 	display: block;
 	margin: 0 auto 15px auto;
 }
@@ -2777,6 +2778,96 @@ ul#liste_disponibilite li a svg{
 	.team_list .team:nth-child(3n+1){
 		clear: none;
 	}
+}
+
+
+/* = Ajout Single Pro
+----------------------------------------------- */
+#banner_image.add_new_post{
+  background-color: #eee;
+  background-image: none;
+  position: relative;
+}
+#banner_image.add_new_post #inner_image{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+#banner_image.add_new_post label{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transform-origin: 50% 50%;
+  z-index: 5;
+}
+#banner_image.add_new_post #preview_banner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transform-origin: 50% 50%;
+  width: 100%;
+}
+.list_team .tiers img.image_preview_input {
+    border-radius: 50%;
+    width: 126px;
+    height: 126px;
+    margin: 0 auto 15px auto;
+}
+#ajout_sections_description .video{
+  background: #515151;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 30px;
+  clear: both;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 56.25%;
+  display: none;
+}
+#ajout_sections_description .video.show{
+  display: block;
+}
+.ajout.ajout_texte{
+  cursor: pointer;
+  background: #dcdcdc;
+  color: #555555;
+  text-align: center;
+  padding: 30px;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.4s ease;
+}
+.ajout.ajout_texte svg{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 15px auto;
+    fill: #555555;
+}
+.ajout.ajout_texte span{
+  display: inline-block;
+}
+.ajout.ajout_texte.modify,
+.ajout.ajout_texte + textarea{
+  display: none;
+}
+.ajout.ajout_texte + textarea.show{
+  display: block;
+}
+.ajout.ajout_texte:hover{
+  background: #eee;
+}
+.ajout_single_pro .section.content.deux_colonnes div:nth-child(1),
+.ajout_single_pro .section.content.deux_colonnes div:nth-child(2){
+  margin: 0;
 }
 
 
@@ -3511,8 +3602,8 @@ table.dataTable tr.even td.sorting_1{
 }
 
 
-
-
+/* = Ajout fiche profressionnelle
+----------------------------------------------- */
 
 
 
