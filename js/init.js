@@ -98,7 +98,7 @@ $(function() {
 	var counter = 1;  //Le décompte commence à 1
 	$('.ajout_bien #ajout_photo').click(function(){
 		counter++;
-		$('#media_content form').append('<div class="ajout"><input id="ajout_image'+counter+'" name="ajout_image'+counter+'" type="file" class="imgInp"><label for="ajout_image'+counter+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div>');
+		$('#media_content form').append('<div class="ajout"><div class="delete_section">Supprimer ce contenu</div><input id="ajout_image'+counter+'" name="ajout_image'+counter+'" type="file" class="imgInp"><label for="ajout_image'+counter+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div>');
 	
 	    function readURL() {
 		    var $input_central = $(this);
@@ -117,6 +117,11 @@ $(function() {
 		    }
 		}
 		$(".imgInp").change(readURL);
+		// Supprimer la section
+		$('.delete_section').click(function(){
+		    var parent_delete = $(this).parent('.ajout');
+			$(parent_delete).remove();
+		});
 	});
 
 	/* DEUX IMAGE */
@@ -124,7 +129,7 @@ $(function() {
 	var counter_double_image = 1;  //Le décompte commence à 1
 	$('.ajout_bien #ajout_deux_photo').click(function(){
 		counter_double_image++;
-		$('#media_content form').append('<div class="ajout" id="double'+counter_double+'"></div>');
+		$('#media_content form').append('<div class="ajout" id="double'+counter_double+'"><div class="delete_section">Supprimer ce contenu</div><div></div></div>');
 		$('#double'+counter_double+'').append('<div class="demi"><input id="ajout_image_double'+counter_double_image+'" name="ajout_image_double'+counter_double_image+'" type="file" class="imgInp"><label for="ajout_image_double'+counter_double_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div>');
 		counter_double_image++;
 		$('#double'+counter_double+'').append('<div class="demi"><input id="ajout_image_double'+counter_double_image+'" name="ajout_image_double'+counter_double_image+'" type="file" class="imgInp"><label for="ajout_image_double'+counter_double_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"><input type="text" placeholder="Légende de la photo"></div><hr class="clear">');
@@ -148,18 +153,28 @@ $(function() {
 		    }
 		}
 		$(".imgInp").change(readURL);
+		// Supprimer la section
+		$('.delete_section').click(function(){
+		    var parent_delete = $(this).parent('.ajout');
+			$(parent_delete).remove();
+		});
 	});
 
 	/* UNE VIDEO */
 	var counter_video = 1;  //Le décompte commence à 1
 	$('.ajout_bien #ajout_video').click(function(){
 		counter_video++;
-		$('#media_content form').append('<div class="ajout"><input id="ajout_video'+counter_video+'" name="ajout_video'+counter_video+'" type="file" class="imgInp"><label for="ajout_video'+counter_video+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0h24v24H0V0z"/><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.4799995,10-10S17.5200005,2,12,2z M10,16.5v-9l6,4.5L10,16.5z"/></svg><span class="add">Ajouter une vidéo</span><span class="modify">Modifier la vidéo</span></label><div class="video"></div></div>');
+		$('#media_content form').append('<div class="ajout"><div class="delete_section">Supprimer ce contenu</div><input id="ajout_video'+counter_video+'" name="ajout_video'+counter_video+'" type="file" class="imgInp"><label for="ajout_video'+counter_video+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0h24v24H0V0z"/><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.4799995,10-10S17.5200005,2,12,2z M10,16.5v-9l6,4.5L10,16.5z"/></svg><span class="add">Ajouter une vidéo</span><span class="modify">Modifier la vidéo</span></label><div class="video"></div></div>');
 		$('#ajout_video'+counter_video+'').change(function(e){
 			var fileName = $(this).val().replace(/C:\\fakepath\\/i, '');
 			$(this).nextAll('.video').addClass('show').html('Vidéo ajoutée : '+fileName);
 		    $(this).next('label').eq(0).addClass('modify');
 	    });
+		// Supprimer la section
+		$('.delete_section').click(function(){
+		    var parent_delete = $(this).parent('.ajout');
+			$(parent_delete).remove();
+		});
 	});
 
 	/* Slider */
@@ -168,7 +183,7 @@ $(function() {
 	$('.ajout_bien #ajout_slider').click(function(){
 		counter_slider_image++;
 		// Ajout de la structure du slider
-		$('#media_content form').append('<div class="ajout" id="slider'+counter_slider+'"><div class="swiper-container swiper_bien"><div class="swiper-wrapper"></div><div class="swiper-pagination swiper-pagination_bien"></div></div><input type="text" placeholder="Légende du slider"></div>');
+		$('#media_content form').append('<div class="ajout" id="slider'+counter_slider+'"><div class="delete_section">Supprimer ce contenu</div><div class="swiper-container swiper_bien"><div class="swiper-wrapper"></div><div class="swiper-pagination swiper-pagination_bien"></div></div><input type="text" placeholder="Légende du slider"></div>');
 		// Ajout des cinq slides
 		$('#slider'+counter_slider+' .swiper-wrapper').append('<div class="swiper-slide"><input id="ajout_image_slider'+counter_slider_image+'" name="ajout_image_slider'+counter_slider_image+'" type="file" class="imgInp"><label for="ajout_image_slider'+counter_slider_image+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
 		counter_slider_image++;
@@ -205,6 +220,11 @@ $(function() {
 		    }
 		}
 		$(".imgInp").change(readURL);
+		// Supprimer la section
+		$('.delete_section').click(function(){
+		    var parent_delete = $(this).parent('.ajout');
+			$(parent_delete).remove();
+		});
 	});
 
 
@@ -626,7 +646,7 @@ $(function() {
 	var counter_photo_alone = 1;  //Le décompte commence à 1
 	$('.ajout_single_pro #ajout_photo').click(function(){
 		counter_photo_alone++;
-		$('#inner_ajout_pro').append('<div class="section content grande_image"><input id="ajout_image'+counter_photo_alone+'" name="ajout_image'+counter_photo_alone+'" type="file" class="imgInp"><label for="ajout_image'+counter_photo_alone+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
+		$('#inner_ajout_pro').append('<div class="section content grande_image"><div class="delete_section">Supprimer ce contenu</div><input id="ajout_image'+counter_photo_alone+'" name="ajout_image'+counter_photo_alone+'" type="file" class="imgInp"><label for="ajout_image'+counter_photo_alone+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
 	
 	    function readURL() {
 		    var $input_central = $(this);
@@ -651,7 +671,7 @@ $(function() {
 	var counter_text_alone = 1;  //Le décompte commence à 1
 	$('.ajout_single_pro #ajout_texte').click(function(){
 		counter_text_alone++;
-		$('#inner_ajout_pro').append('<div class="section content texte"><textarea placeholder="Entrez le texte ici"></textarea></div>');
+		$('#inner_ajout_pro').append('<div class="section content texte"><div class="delete_section">Supprimer ce contenu</div><textarea placeholder="Entrez le texte ici"></textarea></div>');
 		counter_text_alone++;
 	});
 
@@ -659,7 +679,7 @@ $(function() {
 	var counter_deux_colonnes = 1;  //Le décompte commence à 1
 	$('.ajout_single_pro #ajout_deux_colonnes').click(function(){
 		/* Ajout de la section et des deux divs .one et .two */
-		$('#inner_ajout_pro').append('<div class="section content deux_colonnes" id="deux_colonnes'+counter_deux_colonnes+'"><div class="one"></div><div class="two"></div></div>');
+		$('#inner_ajout_pro').append('<div class="section"><div class="delete_section">Supprimer ce contenu</div><div class="deux_colonnes content" id="deux_colonnes'+counter_deux_colonnes+'"><div class="one"></div><div class="two"></div></div></div>');
 		/* ajout des inputs d'image */
 		$('#deux_colonnes'+counter_deux_colonnes+' .one').append('<div class="trigger ajout_photo_double"><input id="ajout_image_one_deux_colonnes'+counter_deux_colonnes+'" name="ajout_image_one_deux_colonnes'+counter_deux_colonnes+'" type="file" class="imgInp"><label for="ajout_image_one_deux_colonnes'+counter_deux_colonnes+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
 		$('#deux_colonnes'+counter_deux_colonnes+' .two').append('<div class="trigger ajout_photo_double"><input id="ajout_image_two_deux_colonnes'+counter_deux_colonnes+'" name="ajout_image_two_deux_colonnes'+counter_deux_colonnes+'" type="file" class="imgInp"><label for="ajout_image_two_deux_colonnes'+counter_deux_colonnes+'"><svg viewBox="0 0 24 24"><path fill="none" d="M0,0.0002344h24v24H0V0.0002344z"/><path d="M21,19.0002346v-14c0-1.1000001-0.8999996-2.0000002-2-2.0000002H5c-1.0999999,0-2,0.9000001-2,2.0000002v14c0,1.1000004,0.9000001,2,2,2h14C20.1000004,21.0002346,21,20.100235,21,19.0002346z M8.5,13.5002346l2.5,3.0100002l3.5-4.5100002l4.5,6H5L8.5,13.5002346z"/></svg><span class="add">Ajouter une photo</span><span class="modify">Modifier la photo</span></label><img class="image_preview_input" src="#"></div>');
@@ -670,7 +690,9 @@ $(function() {
 		$('#deux_colonnes'+counter_deux_colonnes+' .one').append('<div id="ajout_text_one'+counter_deux_colonnes+'" class="ajout ajout_texte trigger"><svg viewBox="0 0 24 24"><path d="M9,9.9999704v11.8000002h2V3.9999707h2v17.7999992h2V3.9999707h2v-2H9c-2.1999998,0-4,1.8-4,4S6.8000002,9.9999704,9,9.9999704z"/><path fill="none" d="M0-0.0000293h24v24H0V-0.0000293z"/></svg><span class="add">Ajouter du texte</span></div><textarea placeholder="Entrez le texte ici"></textarea>');
 		$('#deux_colonnes'+counter_deux_colonnes+' .two').append('<div id="ajout_text_two'+counter_deux_colonnes+'" class="ajout ajout_texte trigger"><svg viewBox="0 0 24 24"><path d="M9,9.9999704v11.8000002h2V3.9999707h2v17.7999992h2V3.9999707h2v-2H9c-2.1999998,0-4,1.8-4,4S6.8000002,9.9999704,9,9.9999704z"/><path fill="none" d="M0-0.0000293h24v24H0V-0.0000293z"/></svg><span class="add">Ajouter du texte</span></div><textarea placeholder="Entrez le texte ici"></textarea>');
 
-		// var minus 1
+
+
+
 		// Apparition textarea
 		$('#ajout_text_one'+counter_deux_colonnes+'').click(function(){
 			var number = counter_deux_colonnes - 1;
@@ -746,6 +768,14 @@ $(function() {
 		        reader.readAsDataURL(this.files[0]);
 		    }
 		}
-		$(".imgInp").change(readURL);
+		$(".imgInp").change(readURL);		
+
+		// Bouton de suppression du contenu
+		$('.delete_section').click(function(){
+		    var parent_delete = $(this).parent('.section');
+			$(parent_delete).remove();
+		});
 	});
+
+
 });
