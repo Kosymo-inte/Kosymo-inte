@@ -978,6 +978,25 @@ header#header a#login:hover{
 header#header a#login:hover svg{
 	fill: #fe5a5f;
 }
+header#header a#login #notification_count{
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background: #ff4d52;
+  height: 15px;
+  width: 15px;
+  top: 0;
+  left: 0;
+  margin-left: -20px;
+  z-index: 10;
+  margin-top: -18px;
+}
+header#header a#login #notification_count div{
+  margin: auto;
+  color: #fff;
+  font-size: 10px;
+}
 /* small version */
 header#header.nav-middle{
 	padding: 10px 50px 10px 20px;
@@ -1377,6 +1396,7 @@ a#comparateur.nav-middle{
   display: block;
   margin-bottom: 25px;
   transition: all 0.4s ease;
+  -webkit-backface-visibility: hidden;
 }
 .lanceur hgroup{
   margin-bottom: 15px;
@@ -1409,6 +1429,7 @@ a#comparateur.nav-middle{
 /* hover effects */
 .lanceur a:hover img{
   opacity: 0.5;
+  -webkit-backface-visibility: hidden;
 }
 .lanceur a.read_more:hover svg{
   transform: rotate(180deg);
@@ -1434,9 +1455,9 @@ a#comparateur.nav-middle{
   left: 0;
   right: 0;
   bottom: 0;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
 }
 .lanceur-big a h2{
@@ -1570,9 +1591,9 @@ a#comparateur.nav-middle{
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
 }
 .item_professionel a span{
@@ -2037,9 +2058,9 @@ a.retour{
 	position: relative;
 }
 .gradient{
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -3035,6 +3056,9 @@ ul#liste_disponibilite li a svg{
 	transition: all 0.4s ease;
   cursor: pointer;
 }
+.account nav#nav_account li span strong{
+  color: #ec5b62;
+}
 .account nav#nav_account li span svg{
 	display: inline-block;
 	vertical-align: middle;
@@ -3202,9 +3226,9 @@ ul#liste_disponibilite li a svg{
   left: 0;
   right: 0;
   bottom: 0;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
 }
 .choix_ajout_projet a p{
