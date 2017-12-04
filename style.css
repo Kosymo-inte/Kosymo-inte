@@ -341,6 +341,7 @@ p{
 	line-height: 1.5em;
 	margin-bottom: 1.2em;
 	font-weight: 300;
+  font-size: 16px;
 }
 p.chapeau{
   font-weight: 500;
@@ -2435,7 +2436,7 @@ img#image_preview_conseillere{
 /* = Page bien neuf
 ----------------------------------------------- */
 #post_explains #logo_agence{
-  padding: 0 30px 30px 30px;
+  padding: 0 60px 30px 60px;
 }
 #post_explains #photo_conseiller{
   display: block;
@@ -3641,14 +3642,54 @@ table.dataTable tr.even td.sorting_1{
 }
 
 
-/* = Ajout fiche profressionnelle
+/* = Texte en forme
 ----------------------------------------------- */
+.text_en_forme li{
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 16px;
+}
+.text_en_forme h2{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #197690;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.text_en_forme ul,
+.text_en_forme ol{
+  margin-bottom: 1.2em;
+}
+
+.text_en_forme ul li:before{
+  content: "■ ";
+}
+.text_en_forme ol{
+  counter-reset: repas;
+}
+.text_en_forme ol li{
+  counter-increment: repas;
+}
+.text_en_forme ol li:before{
+  content: counter(repas);
+  font-weight: bold;
+  margin-right: 8px;
+}
 
 
-
-
-
-
+.text_en_forme p a,
+.text_en_forme li a{
+  text-decoration: underline;
+  color: #197690;
+  transition: all 0.4s ease;
+}
+.text_en_forme p a:hover,
+.text_en_forme li a:hover{
+  background: #197690;
+  color: #fff;
+  text-decoration: none;
+}
 
 
 
