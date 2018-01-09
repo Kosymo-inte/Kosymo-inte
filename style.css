@@ -1099,6 +1099,10 @@ header#header.nav-middle a#logo svg .typo{
     fill: #fff;
     width: 35px;
   }
+  header#header a#login #notification_count{
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 
 
@@ -1869,6 +1873,31 @@ a#comparateur.nav-middle{
   text-align: center;
 }
 
+/* Icone vidéo */
+.video_icon{
+  position: absolute;
+  max-width: 44px;
+  max-height: 44px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+.lanceur_cat:hover .video_icon{
+  opacity: 1;
+}
+.video_icon svg{
+  fill: #fff;
+  max-width: 44px;
+  max-height: 44px;
+  display: block;
+}
+.lanceur_cat.grid-item--height2.grid-item--width2 .video_icon,
+.lanceur_cat.grid-item--height2.grid-item--width2 .video_icon svg{
+  max-width: 88px;
+  max-height: 88px;
+}
 
 
 /* = Carte
@@ -2670,6 +2699,22 @@ ul#liste_disponibilite li a svg{
   .list.presentation .section div:nth-child(2){
     margin: 0px;
   }
+}
+.list.presentation .section li{
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 16px;
+}
+.list.presentation .section li a,
+.list.presentation .section p a{
+  text-decoration: underline;
+  color: #197690;
+  transition: all 0.4s ease;
+}
+.list.presentation .section li a:hover,
+.list.presentation .section p a:hover{
+  background-color: #197690;
+  color: #ffffff;
 }
 
 
