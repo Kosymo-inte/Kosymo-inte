@@ -3738,11 +3738,169 @@ table.dataTable tr.even td.sorting_1{
 
 
 
-
-
-
-
-
-
+/* = Chat
+----------------------------------------------- */
+/* liste des contacts */
+#list_contacts{
+  max-height: 654px;
+  overflow: hidden;
+}
+#list_contacts .list_contact{
+  overflow-y: scroll;
+  max-height: 588px;
+}
+#list_contacts input[type="search"]{
+  border: none;
+  background-color: #f5f5f5;
+  margin: 14px;
+  font-size: 14px;
+  width: calc(100% - 28px);
+  background-image: url(images/search_gris.svg);
+  background-size: 20px 20px;
+  background-position: calc(100% - 5px) 10px;
+  background-repeat: no-repeat;
+}
+#list_contacts input[type="search"]:hover{
+  background-color: #ededed;
+}
+#list_contacts input[type="search"]:focus{
+  background-color: #197690;
+}
+.list_contact .contact{
+  padding: 7px 14px;
+  transition: all 0.4s ease;
+}
+.list_contact .contact.selected,
+.list_contact .contact.selected:hover{
+  background-color: #197690;
+  cursor: default;
+  color: #fff;
+}
+.list_contact .contact:hover{
+  cursor: pointer;
+  background-color: #ededed;
+}
+.list_contact .contact img.avatar{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.list_contact .contact span{
+  vertical-align: middle;
+  font-size: 16px;
+}
+/* Chat */
+#chat{
+  height: 654px;
+  overflow: hidden;
+}
+#chat textarea#message{
+  border: none;
+  background-color: #f5f5f5;
+  margin: 14px;
+  font-size: 14px;
+  width: calc(100% - 28px);
+  height: 71px;
+  resize: none;
+}
+#chat textarea#message:hover{
+  background-color: #ededed;
+}
+#chat textarea#message:focus{
+  background-color: #197690;
+}
+#chat #list_message{
+  overflow-y: scroll;
+  height: 555px;
+  padding: 14px;
+}
+.message_chat{
+  margin-bottom: 30px;
+  width: 75%;
+  position: relative;
+}
+.message_chat.author{
+  margin-left: 25%;
+}
+.message_chat .bulle{
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff5f5;
+  margin-left: 50px;
+  width: calc(100% - 50px);
+}
+.message_chat.author .bulle{
+  color: #fff;
+  background-color: #197690;
+  margin-left: 0px;
+}
+.message_chat img.avatar{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+.message_chat.author img.avatar{
+  right: 0;
+}
+.message_chat time{
+  display: block;
+  margin-top: 3px;
+  color: #8f8f8f;
+  font-size: 10px;
+  margin-left: 50px;
+}
+.message_chat.author time{
+  text-align: right;
+  margin-right: 50px;
+  margin-left: 0px;
+}
+/* Formulaire d'envoi */
+#form_chat{
+  position: relative;
+}
+#chat #attachment_chat_message{
+  position: absolute;
+  right: 70px;
+  bottom: 0px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-image: url(images/ic_attachment_black_24px.svg);
+  background-size: 30px 30px;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+#chat #attachment_chat_message:hover{
+  opacity: 1;
+}
+#chat #submit_chat_message{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  width: 35px;
+  height: 30px;
+  border: none;
+  border: none;
+  background-repeat: no-repeat;
+  background-image: url(images/ic_send_black_24px.svg);
+  background-size: 30px 30px;
+  background-position: 0 0;
+  background-color: transparent;
+  box-shadow: none;
+  line-height: 999em;
+  overflow: hidden;
+}
+#chat #submit_chat_message:hover{
+  background-position: 5px 0;
+}
 
 
