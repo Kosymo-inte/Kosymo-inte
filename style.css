@@ -1768,7 +1768,7 @@ a#comparateur.nav-middle{
 
 /* lanceur dernières annonces */
 .dernieres-annonces .item_professionel{
-	position: 
+	position:
 }
 .dernieres-annonces .item_professionel a .fav{
   position: absolute;
@@ -2192,13 +2192,13 @@ a.retour{
   #label_qualite{
     float: none;
     width: 100%;
-    padding: 30px; 
+    padding: 30px;
   }
   #postez_votre_projet{
     float: none;
     width: 100%;
     position: relative;
-    padding: 30px; 
+    padding: 30px;
   }
   #decoshops_hp #lien_decoshop_hp{
     display: none;
@@ -2430,7 +2430,7 @@ img#image_preview_conseillere{
     height: inherit;
   }
   #breadcrumb p{
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
 
@@ -2724,7 +2724,7 @@ ul#liste_disponibilite li a svg{
 	background-position: center center;
 	background-size: cover;
 	background-image: url(images/image_test_slider.jpg);
-	padding: 50px; 
+	padding: 50px;
 }
 #banner_image a.retour{
 	margin-left: -280px;
@@ -2796,7 +2796,7 @@ ul#liste_disponibilite li a svg{
 #pro_content .section p{
 	max-width: 689px;
 	margin-right: auto;
-	margin-left: auto; 
+	margin-left: auto;
 }
 /* point de vente */
 #pro_content .section.point_de_vente p{
@@ -2833,6 +2833,7 @@ ul#liste_disponibilite li a svg{
 	}
 	#banner_image{
 		padding: 30px;
+    min-height: 300px;
 	}
 	#banner_image a.retour{
 		margin-left: 0px;
@@ -3171,7 +3172,7 @@ ul#liste_disponibilite li a svg{
 #dashboard .contenu h1{
 	font-size: 30px;
 	font-weight: 300;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
 }
 #dashboard .contenu h2{
 	font-weight: 800;
@@ -3189,7 +3190,7 @@ ul#liste_disponibilite li a svg{
 /* Favoris */
 #tabs_favoris{
 	margin-top: 50px;
-	padding: 0; 
+	padding: 0;
 }
 #tabs_favoris .ui-tabs-nav{
 	padding: 0;
