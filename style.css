@@ -2833,7 +2833,7 @@ ul#liste_disponibilite li a svg{
 	}
 	#banner_image{
 		padding: 30px;
-    min-height: 300px;
+		min-height: 300px;
 	}
 	#banner_image a.retour{
 		margin-left: 0px;
@@ -3903,5 +3903,69 @@ table.dataTable tr.even td.sorting_1{
 #chat #submit_chat_message:hover{
   background-position: 5px 0;
 }
+
+
+/* = Blog
+----------------------------------------------- */
+h1.blog{
+  padding: 90px 0 30px 0;
+  font-size: 50px;
+  font-weight: 300;
+}
+/* Articles */
+article.post,
+.grid-sizer-blog{
+  width: calc(50% - 15px);
+}
+article.post a,
+article.post img{
+  transition: all 0.4s ease;
+}
+article.post{
+  margin-bottom: 80px;
+}
+article.post a.lien_image,
+article.post a.lanceur_video{
+  margin-bottom: 15px;
+  display: block;
+}
+article.post a.lien_image:hover img{
+  opacity: 0.5;
+}
+article.post h2{
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+article.post h2 a:hover{
+  color: #197690;
+}
+article.post small.meta{
+  display: block;
+  font-size: 16px;
+  color: #b8b8b8;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+article.post p{
+  line-height: 1.2em;
+}
+article.post a.btn{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  article.post,
+  .grid-sizer-blog{
+    width: 100%;
+  }
+}
+/* Aside */
+aside#aside_blog{
+  
+}
+
 
 

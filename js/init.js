@@ -366,7 +366,7 @@ $(function() {
 	});
 
 
-	/* = Masonry // Home page
+	/* = Masonry // Home page // Blog // Professionnels
 	----------------------------------------------- */
 	if (window.matchMedia("(min-width: 767px)").matches) {
 		/* Designers list */
@@ -385,6 +385,16 @@ $(function() {
 		  $grid_dernieres_annonces.masonry({
 			  itemSelector: '.item_professionel',
 			  columnWidth: '.item_professionel_sizer',
+		  	  percentPosition: true,
+		  	  gutter: 30
+		  });
+		});
+		/* Blog */
+		var $grid_blog = $('.grid_blog').imagesLoaded( function() {
+		  // init Masonry after all images have loaded
+		  $grid_blog.masonry({
+			  itemSelector: '.post',
+			  columnWidth: '.grid-sizer-blog',
 		  	  percentPosition: true,
 		  	  gutter: 30
 		  });
