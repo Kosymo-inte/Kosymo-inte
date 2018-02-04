@@ -3913,6 +3913,11 @@ h1.blog{
   font-size: 50px;
   font-weight: 300;
 }
+@media only screen and (max-width: 767px) {
+	h1.blog{
+		font-size: 25px;
+	}
+}
 /* Articles */
 article.post,
 .grid-sizer-blog{
@@ -4112,4 +4117,140 @@ article.widget_content:hover img{
 .grey a,
 .grey img{
 	display: block;
+}
+
+
+/* = Article single blog
+----------------------------------------------- */
+/* breadcrumbs */
+#breadcrumbs{
+	padding-top: 50px;
+	font-size: 14px;
+	font-weight: 300;
+}
+#breadcrumbs a svg{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	transition: all 0.4s ease;
+	fill: #515151;
+	margin-top: -6px;
+}
+#breadcrumbs a {
+	transition: all 0.4s ease;
+}
+#breadcrumbs a:hover svg{
+	fill: #fe5a5f;
+}
+#breadcrumbs a:hover{
+	color: #fe5a5f;
+}
+#breadcrumbs span.breadcrumb_last{
+	color: #197690;
+}
+h1.blog.single{
+	padding-top: 40px;
+	font-weight: 800;
+	max-width: calc(75% - 15px);
+	padding-bottom: 10px;
+}
+@media only screen and (max-width: 767px) {
+	h1.blog.single{
+		max-width: 100%;
+		font-size: 25px;
+	}
+}
+p.meta.blog.single{
+	color: #b8b8b8;
+	font-style: italic;
+	margin-bottom: 2px;
+}
+/* Contenu textuel */
+.text p{
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
+    font-size: 16px;
+  font-weight: 300;
+}
+.text h2{
+	font-weight: 800;
+	font-size: 22px;
+	margin-bottom: 20px;
+	color: #197690;
+}
+.text h3{
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.text p ~  h2,
+.text ul ~ h2,
+.text ol ~ h2{
+	margin-top: 45px;
+}
+.text li{
+  line-height: 1.4em;
+  font-size: 16px;
+  font-weight: 300;
+}
+.text ul,
+.text ol{
+  margin-bottom: 1.2em;
+}
+.text p ~ ul,
+.text p ~ ol{
+	margin-top: -1.2em;
+}
+.text ul li:before{
+  content: "■ ";
+}
+.text ol{
+  counter-reset: repas;
+}
+.text ol li{
+  counter-increment: repas;
+}
+.text ol li:before{
+  content: counter(repas);
+  font-weight: bold;
+  margin-right: 8px;
+}
+.text p a,
+.text li a{
+	text-decoration: underline;
+	color: #197690;
+}
+.text p a:hover,
+.text li a:hover{
+	background: #197690;
+	color: #fff;
+	text-decoration: none;
+}
+.single_blog .lanceur_video,
+.single_blog img.thumbail{
+	margin-bottom: 30px;
+	display: block;
+}
+h2.articles_lies{
+	font-weight: 600;
+	font-size: 20px;
+	color: #fff;
+	background: #197690;
+	padding: 7px 10px 7px 0px;
+	display: inline-block;
+	margin-bottom: 15px;
+	position: relative;
+	margin-top: 150px;
+}
+h2.articles_lies::before {
+    content: '';
+    display: block;
+    background: #197690;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 2500px;
+    z-index: -1;
+    top: 0;
 }
