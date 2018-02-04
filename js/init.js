@@ -787,5 +787,8 @@ $(function() {
 		});
 	});
 
+	// Swiper blog // bottom ads
+	
+
 
 });
